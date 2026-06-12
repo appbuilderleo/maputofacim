@@ -1,0 +1,219 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "cockroachdb"
+  url      = env("DATABASE_URL")
+}
+
+// ── Utilizadores ─────────────────────────
+model User {
+  id            String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email         String    @unique
+  passwordHash  String
+  name          String
+  role          UserRole  @default(VISITOR)
+  phone         String?
+  avatar        String?
+  isActive      Boolean   @default(true)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  empresa       Empresa?
+  noticias      Noticia[]
+  sessions      Session[]
+}
+
+enum UserRole {
+  VISITOR
+  EXPOSITOR
+  PATROCINADOR
+  ADMIN
+  SUPER_ADMIN
+}
+
+model Session {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId    String   @db.Uuid
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// ── Empresas ─────────────────────────────
+model Empresa {
+  id               String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  userId           String      @unique @db.Uuid
+  nome             String
+  nuit             String      @unique
+  sectorActividade String
+  distrito         String
+  endereco         String?
+  telefone         String
+  email            String
+  website          String?
+  redesSociais     Json?
+  logotipo         String?
+  descricao        String?     @db.String(2000)
+  anoFundacao       Int?
+  numFuncionarios   Int?
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  user             User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  candidatura      Candidatura?
+  documentos       Documento[]
+  patrocinio       Patrocinio?
+}
+
+// ── Candidaturas (Expositores) ───────────
+model Candidatura {
+  id              String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  empresaId       String              @unique @db.Uuid
+  estado          EstadoCandidatura   @default(PENDENTE)
+  tipoStand       String?
+  areaDesejada    Float?
+  produtosExibir  String?             @db.String(2000)
+  necessidades    String?             @db.String(2000)
+  observacoes     String?             @db.String(2000)
+  dataSubmissao   DateTime            @default(now())
+  dataAprovacao   DateTime?
+  motivoRejeicao  String?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  empresa         Empresa             @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  historico       HistoricoCandidatura[]
+}
+
+enum EstadoCandidatura {
+  RASCUNHO
+  PENDENTE
+  EM_ANALISE
+  APROVADA
+  REJEITADA
+  CANCELADA
+}
+
+model HistoricoCandidatura {
+  id              String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  candidaturaId   String    @db.Uuid
+  estadoAnterior  String
+  estadoNovo      String
+  observacao      String?
+  criadoPor       String?
+  createdAt       DateTime  @default(now())
+
+  candidatura     Candidatura @relation(fields: [candidaturaId], references: [id], onDelete: Cascade)
+}
+
+// ── Patrocínios ──────────────────────────
+model PacotePatrocinio {
+  id          String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nome        String        @unique
+  nivel       String
+  preco       Decimal?      @db.Decimal(12, 2)
+  beneficios  Json
+  limiteVagas Int?
+  ordem       Int           @default(0)
+  isActive    Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  patrocinios Patrocinio[]
+}
+
+model Patrocinio {
+  id              String              @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  empresaId       String              @unique @db.Uuid
+  pacoteId        String              @db.Uuid
+  estado          EstadoPatrocinio    @default(INTERESSE)
+  observacoes     String?             @db.String(2000)
+  dataSolicitacao DateTime            @default(now())
+  dataAprovacao   DateTime?
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  empresa         Empresa             @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  pacote          PacotePatrocinio    @relation(fields: [pacoteId], references: [id])
+}
+
+enum EstadoPatrocinio {
+  INTERESSE
+  EM_ANALISE
+  APROVADO
+  REJEITADO
+  CONFIRMADO
+}
+
+// ── Documentos ───────────────────────────
+model Documento {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  empresaId   String    @db.Uuid
+  nome        String
+  tipo        String
+  url         String
+  tamanho     Int?
+  createdAt   DateTime  @default(now())
+
+  empresa     Empresa   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+}
+
+// ── Notícias e Conteúdo ──────────────────
+model Noticia {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  titulo      String
+  slug        String    @unique
+  resumo      String    @db.String(500)
+  conteudo    String    @db.String(10000)
+  imagem      String?
+  categoria   String?
+  destaque    Boolean   @default(false)
+  publicado   Boolean   @default(false)
+  autorId     String    @db.Uuid
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  autor       User      @relation(fields: [autorId], references: [id])
+}
+
+// ── Eventos / Cronograma ─────────────────
+model Evento {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  titulo      String
+  descricao   String?   @db.String(2000)
+  dataInicio  DateTime
+  dataFim     DateTime?
+  local       String?
+  tipo        String?
+  isPublic    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// ── Contacto ─────────────────────────────
+model MensagemContacto {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  nome        String
+  email       String
+  telefone    String?
+  assunto     String
+  mensagem    String    @db.String(2000)
+  lida        Boolean   @default(false)
+  respondida  Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+}
+
+// ── Galeria ──────────────────────────────
+model ItemGaleria {
+  id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  titulo      String?
+  descricao   String?
+  url         String
+  tipo        String
+  ordem       Int       @default(0)
+  createdAt   DateTime  @default(now())
+}
