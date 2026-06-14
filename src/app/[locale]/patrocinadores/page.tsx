@@ -10,9 +10,19 @@ export const metadata: Metadata = {
 
 // The static data has been moved to translations
 
+interface Pacote {
+  id: string;
+  name: string;
+  color: string;
+  bgClass: string;
+  price: string;
+  icon: string;
+  benefits: string[];
+}
+
 export default function PatrocinadoresPage() {
   const t = useTranslations('Patrocinadores');
-  const packagesData = t.raw('packages') as Array<Record<string, unknown>>;
+  const packagesData = t.raw('packages') as Pacote[];
 
   // Merge static styling props
   const packages = [

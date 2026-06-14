@@ -9,9 +9,15 @@ export const metadata: Metadata = {
 
 // The static data has been moved to translations
 
+interface Fase {
+  mes: string;
+  fase: string;
+  actividades: Array<{ titulo: string; desc: string; }>;
+}
+
 export default function CronogramaPage() {
   const t = useTranslations('Cronograma');
-  const fases = t.raw('fases') as Array<Record<string, unknown>>;
+  const fases = t.raw('fases') as Fase[];
 
   // Define statuses statically to preserve logic
   const statuses = [

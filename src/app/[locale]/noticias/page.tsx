@@ -10,9 +10,18 @@ export const metadata: Metadata = {
 
 // The static data has been moved to translations
 
+interface Noticia {
+  slug: string;
+  category: string;
+  date: string;
+  title: string;
+  excerpt: string;
+  image: string;
+}
+
 export default function NoticiasPage() {
   const t = useTranslations('Noticias');
-  const items = t.raw('items') as Array<Record<string, unknown>>;
+  const items = t.raw('items') as Noticia[];
 
   // Restore slugs and destaque static flags that are tied to routes
   const noticias = [
