@@ -129,7 +129,7 @@ export default async function AdminPatrocinioDetailsPage({ params }: { params: P
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px', fontSize: '14px' }}>
               <span style={{ color: 'var(--facim-gray-500)' }}>Custo Base:</span>
-              <strong style={{ color: 'var(--facim-dark)' }}>{patrocinio.pacote.preco?.toLocaleString('pt-MZ', { style: 'currency', currency: 'MZN' }) || 'Sob Consulta'}</strong>
+              <strong style={{ color: 'var(--facim-dark)' }}>{patrocinio.pacote.preco ? Number(patrocinio.pacote.preco).toLocaleString('pt-MZ', { style: 'currency', currency: 'MZN' }) : 'Sob Consulta'}</strong>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '14px' }}>
               <span style={{ color: 'var(--facim-gray-500)' }}>Solicitado a:</span>
