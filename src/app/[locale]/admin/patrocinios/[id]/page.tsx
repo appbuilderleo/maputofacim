@@ -24,7 +24,7 @@ export default async function AdminPatrocinioDetailsPage({ params }: { params: P
 
   async function actualizarEstado(formData: FormData) {
     'use server';
-    const novoEstado = formData.get('estado') as string;
+    const novoEstado = formData.get('estado') as any;
     
     await prisma.patrocinio.update({
       where: { id: id },

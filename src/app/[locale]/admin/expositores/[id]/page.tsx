@@ -32,7 +32,7 @@ export default async function DetalheExpositorPage(props: { params: Promise<{ id
 
     await prisma.candidatura.update({
       where: { id: candidatura.id },
-      data: { estado: novoEstado }
+      data: { estado: novoEstado as any }
     });
 
     revalidatePath(`/admin/expositores/${empresa!.id}`);
