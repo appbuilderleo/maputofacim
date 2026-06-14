@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 interface Noticia {
   slug: string;
-  category: string;
-  date: string;
-  title: string;
-  excerpt: string;
-  image: string;
+  categoria: string;
+  data: string;
+  titulo: string;
+  resumo: string;
+  imagem: string;
 }
 
 export default function NoticiasPage() {

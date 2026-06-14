@@ -11,13 +11,12 @@ export const metadata: Metadata = {
 // The static data has been moved to translations
 
 interface Pacote {
-  id: string;
-  name: string;
+  nome: string;
   color: string;
   bgClass: string;
-  price: string;
+  nivel: string;
   icon: string;
-  benefits: string[];
+  beneficios: string[];
 }
 
 export default function PatrocinadoresPage() {
