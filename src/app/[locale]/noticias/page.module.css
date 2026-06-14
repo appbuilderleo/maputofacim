@@ -1,0 +1,209 @@
+/* ══════════════════════════════════════════════════════════════
+   Notícias — FACIM 2026
+   ══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--facim-dark);
+  color: white;
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--facim-gold-light);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: var(--space-4);
+}
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── News Section ───────────────────────────────────────────── */
+.newsSection {
+  padding: var(--space-16) 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* ── Featured Grid ──────────────────────────────────────────── */
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+}
+
+.featuredCard {
+  display: block;
+  text-decoration: none;
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--facim-gray-200);
+  transition: all var(--transition-base);
+}
+
+.featuredCard:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.featuredImgPlaceholder {
+  height: 240px;
+  background: var(--facim-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--facim-gray-300);
+  font-size: 48px;
+}
+
+.featuredContent {
+  padding: var(--space-8);
+}
+
+.newsMetaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.newsDate {
+  font-size: 12px;
+  color: var(--facim-gray-400);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.featuredTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-3);
+  line-height: 1.3;
+}
+
+.featuredResumo {
+  font-size: 14px;
+  color: var(--facim-gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+
+.readMore {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--facim-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ── All News Grid ──────────────────────────────────────────── */
+.allNewsHeader {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--facim-gray-200);
+}
+
+.allNewsHeader h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--facim-dark);
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.newsCard {
+  display: block;
+  text-decoration: none;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--facim-gray-200);
+  transition: all var(--transition-base);
+}
+
+.newsCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.newsImgPlaceholder {
+  height: 180px;
+  background: var(--facim-off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--facim-gray-300);
+  font-size: 32px;
+}
+
+.newsContent {
+  padding: var(--space-6);
+}
+
+.newsTitle {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-2);
+  line-height: 1.4;
+}
+
+.newsResumo {
+  font-size: 13px;
+  color: var(--facim-gray-500);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .featuredGrid { grid-template-columns: 1fr; }
+  .newsGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .heroTitle { font-size: 26px; }
+  .newsGrid { grid-template-columns: 1fr; }
+  .featuredContent { padding: var(--space-5); }
+}

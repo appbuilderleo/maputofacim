@@ -1,0 +1,150 @@
+/* ══════════════════════════════════════════════════════════════
+   Contactos — FACIM 2026
+   ══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--facim-dark);
+  color: white;
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--facim-gold-light);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: var(--space-4);
+}
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Contact Section ────────────────────────────────────────── */
+.contactSection {
+  padding: var(--space-16) 0;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+/* ── Form Card ──────────────────────────────────────────────── */
+.formCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  border: 1px solid var(--facim-gray-200);
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-1);
+}
+
+.formSub {
+  font-size: 13px;
+  color: var(--facim-gray-400);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Info Cards ─────────────────────────────────────────────── */
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.infoCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  border: 1px solid var(--facim-gray-200);
+  transition: all var(--transition-base);
+}
+
+.infoCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.infoIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--badge-orange-bg);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--facim-orange);
+  font-size: 20px;
+  margin-bottom: var(--space-3);
+}
+
+.infoCard h3 {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-1);
+}
+
+.infoCard p {
+  font-size: 13px;
+  color: var(--facim-gray-400);
+  line-height: 1.6;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .infoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTitle { font-size: 26px; }
+  .formCard { padding: var(--space-5); }
+  .infoCol { grid-template-columns: 1fr; }
+  .container { padding: 0 var(--space-4); }
+}

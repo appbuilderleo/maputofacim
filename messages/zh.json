@@ -1,0 +1,483 @@
+{
+  "Header": {
+    "login": "登录",
+    "register": "注册",
+    "registerCompany": "注册公司",
+    "menu": "菜单"
+  },
+  "LocaleSwitcher": {
+    "label": "更改语言",
+    "pt": "PT",
+    "en": "EN",
+    "es": "ES",
+    "fr": "FR",
+    "zh": "ZH",
+    "ru": "RU"
+  },
+  "Home": {
+    "Hero": {
+      "eyebrow": "第61届 · 2026年8月 · 马普托",
+      "title": "迈向",
+      "highlight": "FACIM",
+      "subtitle": "马普托省正准备参加莫桑比克最大的国际博览会。加入数百家企业的行列，展示我们地区的潜力。",
+      "registerBtn": "注册企业",
+      "learnMoreBtn": "了解更多",
+      "days": "天",
+      "hours": "小时",
+      "minutes": "分钟",
+      "seconds": "秒"
+    },
+    "Stats": {
+      "exhibitors": "预计参展商",
+      "districts": "参展地区",
+      "sectors": "活动领域",
+      "visitors": "预计参观人数"
+    },
+    "About": {
+      "eyebrow": "关于活动",
+      "title": "向世界展示马普托的潜力",
+      "p1": "省工业和贸易局协调马普托省参加2026年FACIM，动员所有8个区的企业集体展示经济实力、创新和生产能力。",
+      "p2": "该平台集中了整个流程——从注册到参与——确保透明、高效，并为所有利益相关者提供现代数字化体验。",
+      "btn": "了解活动",
+      "objectiveTitle": "目标",
+      "objectiveDesc": "将全省参与的管理数字化和集中化",
+      "impactTitle": "影响",
+      "impactDesc": "提高机构知名度和企业动员能力"
+    },
+    "Features": {
+      "eyebrow": "特点",
+      "title": "全部在一个平台上",
+      "subtitle": "面向参展商、赞助商和管理团队的全面工具",
+      "items": {
+        "digital": {
+          "title": "数字注册",
+          "desc": "快速轻松地在线注册您的企业。实时跟踪您的申请状态。"
+        },
+        "sponsorships": {
+          "title": "赞助",
+          "desc": "查看可用的赞助方案，将您的品牌与莫桑比克最大的博览会联系起来。"
+        },
+        "schedule": {
+          "title": "日程安排",
+          "desc": "查看2026年FACIM的所有筹备活动和重要日期。"
+        },
+        "dashboard": {
+          "title": "管理仪表板",
+          "desc": "提供完整报告、统计数据和管理工具的行政区域。"
+        }
+      }
+    },
+    "Sponsors": {
+      "eyebrow": "赞助",
+      "title": "将您的品牌与FACIM联系起来",
+      "subtitle": "为您的公司选择理想的方案，并确保在莫桑比克最大的博览会上获得知名度",
+      "btn": "查看赞助方案",
+      "packages": {
+        "platinum": "最大知名度",
+        "gold": "高级曝光",
+        "silver": "稳固的展示",
+        "bronze": "基础参与"
+      }
+    },
+    "CTA": {
+      "eyebrow": "注册开放",
+      "title": "立即注册您的企业",
+      "desc": "过程简单且数字化。通过平台注册、提交申请并跟踪整个过程。",
+      "registerBtn": "注册企业",
+      "contactBtn": "联系我们"
+    }
+  },
+  "Sobre": {
+    "hero": {
+      "eyebrow": "关于活动",
+      "title": "迈向",
+      "highlight": "FACIM 2026",
+      "sub": "马普托省工业和贸易局负责协调、推广和管理马普托省参加第61届莫桑比克农业、商业和工业博览会的准备工作。"
+    },
+    "mission": {
+      "eyebrow": "使命",
+      "title": "展示马普托的经济潜力",
+      "p1": "\"迈向FACIM\"活动旨在动员马普托省所有8个区的企业，组织起来，有影响力地集体参加莫桑比克最大的国际博览会。",
+      "p2": "通过这个数字平台，我们打算使整个准备物流现代化——从在线注册到赞助管理和机构沟通——确保效率、透明度和可访问性。",
+      "stats": {
+        "edition": "FACIM 届数",
+        "districts": "参展地区",
+        "companies": "预计企业",
+        "sectors": "活动领域"
+      }
+    },
+    "objectives": {
+      "eyebrow": "目标",
+      "title": "我们打算实现什么",
+      "items": [
+        {
+          "title": "数字化流程",
+          "desc": "将手动注册和管理流程转变为可访问的集成数字系统。"
+        },
+        {
+          "title": "管理参展商",
+          "desc": "集中希望参加FACIM的公司的注册、跟踪和批准。"
+        },
+        {
+          "title": "管理赞助商",
+          "desc": "提供有吸引力的赞助方案并透明地管理整个流程。"
+        },
+        {
+          "title": "推广活动",
+          "desc": "让所有参与者了解日期、活动和准备活动。"
+        },
+        {
+          "title": "集中文档",
+          "desc": "在一个安全且可访问的位置存储和管理所有文档。"
+        },
+        {
+          "title": "生成报告",
+          "desc": "生成实时统计数据和报告以支持决策。"
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "阶段",
+      "title": "活动日历",
+      "phases": [
+        {
+          "phase": "阶段 1",
+          "title": "动员",
+          "period": "2026年6月 – 7月"
+        },
+        {
+          "phase": "阶段 2",
+          "title": "注册和准备",
+          "period": "2026年7月"
+        },
+        {
+          "phase": "阶段 3",
+          "title": "FACIM 2026",
+          "period": "2026年8月"
+        },
+        {
+          "phase": "阶段 4",
+          "title": "展后和报告",
+          "period": "2026年9月"
+        }
+      ]
+    },
+    "org": {
+      "name": "省工业和贸易局",
+      "sub": "马普托省 — 莫桑比克共和国",
+      "desc": "负责协调和促进马普托省工商业活动的机构，包括组织全省参加博览会和活动。"
+    }
+  },
+  "Contactos": {
+    "hero": {
+      "eyebrow": "联系我们",
+      "title": "联系方式",
+      "sub": "对参加2026年FACIM有疑问吗？请联系马普托省工业和贸易局团队。"
+    },
+    "form": {
+      "title": "给我们发消息",
+      "sub": "我们将在最多48个工作小时内回复。",
+      "alertSuccessTitle": "消息已发送",
+      "alertSuccessText": "您的消息已成功接收。我们将很快与您联系。",
+      "alertErrorTitle": "发送错误",
+      "alertErrorText": "发生错误。请重试或通过电话联系我们。",
+      "lblName": "全名",
+      "plhName": "您的名字",
+      "lblEmail": "电子邮件",
+      "plhEmail": "email@example.com",
+      "lblPhone": "电话",
+      "plhPhone": "+258 8X XXX XXXX",
+      "lblSubject": "主题",
+      "plhSubject": "联系原因",
+      "lblMessage": "消息",
+      "plhMessage": "写下您的消息...",
+      "btnSending": "发送中...",
+      "btnSend": "发送消息"
+    },
+    "info": {
+      "addressTitle": "地址",
+      "addressLine1": "特拉巴略大道 123号",
+      "addressLine2": "马托拉市",
+      "addressLine3": "马普托省",
+      "phoneTitle": "电话",
+      "emailTitle": "电子邮件",
+      "timeTitle": "营业时间",
+      "timeLine1": "周一至周五",
+      "timeLine2": "08:00 — 16:00"
+    }
+  },
+  "Login": {
+    "brandEyebrow": "第61届 · 2026年8月",
+    "brandTitle": "迈向",
+    "brandDesc": "访问您的专属区域以管理您的申请、上传文档并跟踪您的参与状态。",
+    "formTitle": "登录",
+    "formSub": "输入您的凭据以访问平台",
+    "lblEmail": "电子邮件",
+    "plhEmail": "email@example.com",
+    "lblPassword": "密码",
+    "plhPassword": "••••••••",
+    "btnLogin": "登录",
+    "btnLoggingIn": "登录中...",
+    "noAccount": "没有账号？",
+    "linkRegister": "注册您的公司",
+    "linkSponsor": "赞助商入口 →",
+    "errConnection": "连接错误。请检查您的互联网。",
+    "errLogin": "登录错误",
+    "alertError": "错误"
+  },
+  "Registar": {
+    "brandEyebrow": "参展商注册",
+    "brandTitle": "参与",
+    "brandDesc": "只需几分钟即可注册您的公司。该过程100%数字化，您可以通过平台跟踪申请的整个状态。",
+    "step1Label": "账号",
+    "step2Label": "公司",
+    "step1Title": "创建账号",
+    "step1Sub": "平台访问信息",
+    "step2Title": "公司数据",
+    "step2Sub": "关于您的公司的信息",
+    "errMissing": "填写所有必填字段",
+    "errMismatch": "密码不匹配",
+    "errLength": "密码至少需要8个字符",
+    "errRegister": "创建账号时出错",
+    "errCompany": "注册公司时出错",
+    "errConnection": "连接错误。请检查您的互联网。",
+    "lblName": "全名 *",
+    "plhName": "您的名字",
+    "lblPhone": "电话",
+    "plhPhone": "+258 8X XXX XXXX",
+    "lblPassword": "密码 *",
+    "plhPassword": "最少8个字符",
+    "hintPassword": "必须包含大写字母、小写字母和数字",
+    "lblConfirm": "确认密码 *",
+    "plhConfirm": "重复密码",
+    "btnContinue": "继续 →",
+    "lblCompanyName": "公司名称 *",
+    "plhCompanyName": "例：ABC Lda.",
+    "lblNuit": "NUIT *",
+    "plhNuit": "400XXXXXXX",
+    "lblSector": "活动领域 *",
+    "lblDistrict": "地区 *",
+    "optionSelect": "选择...",
+    "lblCompPhone": "公司电话",
+    "plhCompPhone": "+258 21 XXX XXX",
+    "lblCompEmail": "公司电子邮件",
+    "plhCompEmail": "company@example.com",
+    "lblDesc": "公司简介",
+    "plhDesc": "公司活动的简要说明...",
+    "btnBack": "← 返回",
+    "btnRegister": "注册公司",
+    "btnRegistering": "注册中...",
+    "hasAccount": "已有账号？",
+    "linkLogin": "登录",
+    "alertAttention": "注意"
+  },
+  "Cronograma": {
+    "hero": {
+      "eyebrow": "日历",
+      "title": "时间表",
+      "sub": "遵循准备阶段，不要错过FACIM的任何重要日期。"
+    },
+    "legend": {
+      "title": "状态说明",
+      "concluido": "已完成",
+      "emCurso": "进行中",
+      "pendente": "待定",
+      "evento": "活动日期"
+    },
+    "fases": [
+      {
+        "mes": "2026年6月",
+        "fase": "动员阶段",
+        "actividades": [
+          {
+            "dia": "1 至 15",
+            "titulo": "活动启动",
+            "desc": "数字平台展示。"
+          },
+          {
+            "dia": "15 至 30",
+            "titulo": "地区会议",
+            "desc": "与当地协会的会议。"
+          }
+        ]
+      },
+      {
+        "mes": "2026年7月",
+        "fase": "注册",
+        "actividades": [
+          {
+            "dia": "1 至 20",
+            "titulo": "注册期",
+            "desc": "参展商注册。"
+          },
+          {
+            "dia": "21 至 25",
+            "titulo": "申请分析",
+            "desc": "评估公司。"
+          },
+          {
+            "dia": "26 至 31",
+            "titulo": "通知",
+            "desc": "与公司的沟通。"
+          }
+        ]
+      },
+      {
+        "mes": "2026年8月",
+        "fase": "准备和展览",
+        "actividades": [
+          {
+            "dia": "1 至 15",
+            "titulo": "物流准备",
+            "desc": "展台设计。"
+          },
+          {
+            "dia": "16 至 20",
+            "titulo": "培训",
+            "desc": "培训课程。"
+          },
+          {
+            "dia": "24",
+            "titulo": "组装",
+            "desc": "前往里卡特拉。"
+          },
+          {
+            "dia": "25 至 31",
+            "titulo": "FACIM 2026",
+            "desc": "展览。"
+          }
+        ]
+      },
+      {
+        "mes": "2026年9月",
+        "fase": "展后",
+        "actividades": [
+          {
+            "dia": "1 至 15",
+            "titulo": "评估",
+            "desc": "收集反馈。"
+          }
+        ]
+      }
+    ]
+  },
+  "Noticias": {
+    "hero": {
+      "eyebrow": "沟通",
+      "title": "新闻",
+      "sub": "关注马普托省筹备FACIM 2026的最新消息。"
+    },
+    "readMore": "阅读更多 →",
+    "allNews": "所有新闻",
+    "items": [
+      {
+        "titulo": "FACIM 2026平台发布",
+        "resumo": "数字平台发布公告。",
+        "categoria": "机构",
+        "data": "2026年6月12日"
+      },
+      {
+        "titulo": "参展商注册开放",
+        "resumo": "注册正式开放。",
+        "categoria": "注册",
+        "data": "2026年6月12日"
+      },
+      {
+        "titulo": "预备会议",
+        "resumo": "举行了第一次预备会议。",
+        "categoria": "准备",
+        "data": "2026年6月10日"
+      },
+      {
+        "titulo": "赞助方案可用",
+        "resumo": "了解四个赞助方案。",
+        "categoria": "赞助",
+        "data": "2026年6月8日"
+      },
+      {
+        "titulo": "活动日历",
+        "resumo": "日历现已可用。",
+        "categoria": "时间表",
+        "data": "2026年6月5日"
+      },
+      {
+        "titulo": "公司培训",
+        "resumo": "企业系列培训。",
+        "categoria": "培训",
+        "data": "2026年6月2日"
+      }
+    ]
+  },
+  "Patrocinadores": {
+    "hero": {
+      "eyebrow": "赞助 · FACIM 2026",
+      "title": "关联您的",
+      "highlight": "品牌",
+      "sub": "支持马普托省的参与。"
+    },
+    "section": {
+      "eyebrow": "可用方案",
+      "title": "选择理想的方案",
+      "sub": "具有渐进优势的四个赞助级别。"
+    },
+    "btnInterest": "表达兴趣",
+    "cta": {
+      "title": "对方案有疑问？",
+      "desc": "我们的团队可以提供帮助。",
+      "btnContact": "联系我们",
+      "btnRegister": "注册为赞助商"
+    },
+    "packages": [
+      {
+        "nome": "白金",
+        "nivel": "最大曝光度",
+        "beneficios": [
+          "所有宣传材料上的标志",
+          "独家展台",
+          "演讲中提及",
+          "媒体采访",
+          "主横幅",
+          "品牌激活空间",
+          "VIP邀请",
+          "独家报告"
+        ]
+      },
+      {
+        "nome": "黄金",
+        "nivel": "高级曝光",
+        "beneficios": [
+          "宣传材料上的标志",
+          "显眼展台",
+          "开幕致辞提及",
+          "次要横幅",
+          "产品演示空间",
+          "VIP邀请",
+          "黄金证书"
+        ]
+      },
+      {
+        "nome": "白银",
+        "nivel": "稳固曝光",
+        "beneficios": [
+          "横幅上的标志",
+          "标准展台",
+          "目录提及",
+          "网站标志",
+          "开幕邀请",
+          "白银证书"
+        ]
+      },
+      {
+        "nome": "青铜",
+        "nivel": "基础参与",
+        "beneficios": [
+          "网站标志",
+          "目录提及",
+          "共享展台",
+          "展会参观邀请",
+          "参与证书"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "Header": {
+    "login": "Entrar",
+    "register": "Inscrever",
+    "registerCompany": "Inscrever Empresa",
+    "menu": "Menu"
+  },
+  "LocaleSwitcher": {
+    "label": "Mudar idioma",
+    "pt": "PT",
+    "en": "EN",
+    "es": "ES",
+    "fr": "FR",
+    "zh": "ZH",
+    "ru": "RU"
+  },
+  "Home": {
+    "Hero": {
+      "eyebrow": "61ª Edição · Agosto 2026 · Maputo",
+      "title": "A Caminho da",
+      "highlight": "FACIM",
+      "subtitle": "A Província de Maputo prepara a sua participação na maior feira internacional de Moçambique. Junte-se a centenas de empresas e mostre o potencial da nossa região.",
+      "registerBtn": "Inscrever Empresa",
+      "learnMoreBtn": "Saber Mais",
+      "days": "Dias",
+      "hours": "Horas",
+      "minutes": "Minutos",
+      "seconds": "Segundos"
+    },
+    "Stats": {
+      "exhibitors": "Expositores Esperados",
+      "districts": "Distritos Participantes",
+      "sectors": "Sectores de Actividade",
+      "visitors": "Visitantes Estimados"
+    },
+    "About": {
+      "eyebrow": "Sobre a Campanha",
+      "title": "Mostramos ao Mundo o Potencial de Maputo",
+      "p1": "A Direcção Provincial da Indústria e Comércio coordena a participação da Província de Maputo na FACIM 2026, mobilizando empresas de todos os 8 distritos para uma demonstração colectiva de força económica, inovação e capacidade produtiva.",
+      "p2": "Esta plataforma centraliza todo o processo — desde a inscrição até à participação — garantindo transparência, eficiência e uma experiência digital moderna para todos os intervenientes.",
+      "btn": "Conhecer a Campanha",
+      "objectiveTitle": "Objectivo",
+      "objectiveDesc": "Digitalizar e centralizar toda a gestão da participação provincial",
+      "impactTitle": "Impacto",
+      "impactDesc": "Aumentar a visibilidade institucional e a mobilização empresarial"
+    },
+    "Features": {
+      "eyebrow": "Funcionalidades",
+      "title": "Tudo Numa Única Plataforma",
+      "subtitle": "Ferramentas completas para expositores, patrocinadores e equipa de gestão",
+      "items": {
+        "digital": {
+          "title": "Inscrição Digital",
+          "desc": "Registe a sua empresa online de forma simples e rápida. Acompanhe o estado da sua candidatura em tempo real."
+        },
+        "sponsorships": {
+          "title": "Patrocínios",
+          "desc": "Consulte os pacotes de patrocínio disponíveis e associe a sua marca à maior feira de Moçambique."
+        },
+        "schedule": {
+          "title": "Cronograma",
+          "desc": "Consulte todas as actividades preparatórias e datas importantes para a FACIM 2026."
+        },
+        "dashboard": {
+          "title": "Painel de Gestão",
+          "desc": "Área administrativa com relatórios, estatísticas e ferramentas de gestão completas."
+        }
+      }
+    },
+    "Sponsors": {
+      "eyebrow": "Patrocínios",
+      "title": "Associe a Sua Marca à FACIM",
+      "subtitle": "Escolha o pacote ideal para a sua empresa e garanta visibilidade na maior feira de Moçambique",
+      "btn": "Ver Pacotes de Patrocínio",
+      "packages": {
+        "platinum": "Visibilidade máxima",
+        "gold": "Exposição premium",
+        "silver": "Presença sólida",
+        "bronze": "Participação base"
+      }
+    },
+    "CTA": {
+      "eyebrow": "Inscrições Abertas",
+      "title": "Inscreva a Sua Empresa Agora",
+      "desc": "O processo é simples e digital. Registe-se, submeta a candidatura e acompanhe todo o processo através da plataforma.",
+      "registerBtn": "Inscrever Empresa",
+      "contactBtn": "Fale Connosco"
+    }
+  },
+  "Sobre": {
+    "hero": {
+      "eyebrow": "Sobre a Campanha",
+      "title": "A Caminho da",
+      "highlight": "FACIM 2026",
+      "sub": "A Direcção Provincial da Indústria e Comércio de Maputo coordena a preparação, promoção e gestão da participação da Província de Maputo na 61ª Edição da Feira Agro-Pecuária, Comercial e Industrial de Moçambique."
+    },
+    "mission": {
+      "eyebrow": "Missão",
+      "title": "Mostrar o Potencial Económico de Maputo",
+      "p1": "A campanha \"A Caminho da FACIM\" visa mobilizar as empresas de todos os 8 distritos da Província de Maputo para uma participação colectiva, organizada e impactante na maior feira internacional de Moçambique.",
+      "p2": "Através desta plataforma digital, pretendemos modernizar toda a logística de preparação — desde a inscrição online até à gestão de patrocínios e comunicação institucional — garantindo eficiência, transparência e acessibilidade.",
+      "stats": {
+        "edition": "Edição da FACIM",
+        "districts": "Distritos Participantes",
+        "companies": "Empresas Previstas",
+        "sectors": "Sectores de Actividade"
+      }
+    },
+    "objectives": {
+      "eyebrow": "Objectivos",
+      "title": "O Que Pretendemos Alcançar",
+      "items": [
+        {
+          "title": "Digitalizar o Processo",
+          "desc": "Transformar os processos manuais de inscrição e gestão num sistema digital integrado e acessível."
+        },
+        {
+          "title": "Gerir Expositores",
+          "desc": "Centralizar o registo, acompanhamento e aprovação de empresas que desejam participar na FACIM."
+        },
+        {
+          "title": "Gerir Patrocinadores",
+          "desc": "Oferecer pacotes de patrocínio atractivos e gerir todo o processo de forma transparente."
+        },
+        {
+          "title": "Divulgar Actividades",
+          "desc": "Manter todos os participantes informados sobre datas, eventos e actividades preparatórias."
+        },
+        {
+          "title": "Centralizar Documentação",
+          "desc": "Armazenar e gerir toda a documentação num único local seguro e acessível."
+        },
+        {
+          "title": "Produzir Relatórios",
+          "desc": "Gerar estatísticas e relatórios em tempo real para apoiar a tomada de decisões."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Fases",
+      "title": "Calendário da Campanha",
+      "phases": [
+        {
+          "phase": "Fase 1",
+          "title": "Mobilização",
+          "period": "Junho – Julho 2026"
+        },
+        {
+          "phase": "Fase 2",
+          "title": "Inscrições e Preparação",
+          "period": "Julho 2026"
+        },
+        {
+          "phase": "Fase 3",
+          "title": "FACIM 2026",
+          "period": "Agosto 2026"
+        },
+        {
+          "phase": "Fase 4",
+          "title": "Pós-Feira e Relatório",
+          "period": "Setembro 2026"
+        }
+      ]
+    },
+    "org": {
+      "name": "Direcção Provincial da Indústria e Comércio",
+      "sub": "Província de Maputo — República de Moçambique",
+      "desc": "Órgão responsável pela coordenação e promoção da actividade industrial e comercial na Província de Maputo, incluindo a organização da participação provincial em feiras e eventos."
+    }
+  },
+  "Contactos": {
+    "hero": {
+      "eyebrow": "Fale Connosco",
+      "title": "Contactos",
+      "sub": "Tem dúvidas sobre a participação na FACIM 2026? Entre em contacto com a equipa da Direcção Provincial da Indústria e Comércio."
+    },
+    "form": {
+      "title": "Envie-nos uma Mensagem",
+      "sub": "Responderemos no prazo máximo de 48 horas úteis.",
+      "alertSuccessTitle": "Mensagem Enviada",
+      "alertSuccessText": "A sua mensagem foi recebida com sucesso. Entraremos em contacto brevemente.",
+      "alertErrorTitle": "Erro ao Enviar",
+      "alertErrorText": "Ocorreu um erro. Tente novamente ou contacte-nos por telefone.",
+      "lblName": "Nome Completo",
+      "plhName": "O seu nome",
+      "lblEmail": "Email",
+      "plhEmail": "email@exemplo.com",
+      "lblPhone": "Telefone",
+      "plhPhone": "+258 8X XXX XXXX",
+      "lblSubject": "Assunto",
+      "plhSubject": "Motivo do contacto",
+      "lblMessage": "Mensagem",
+      "plhMessage": "Escreva a sua mensagem...",
+      "btnSending": "Enviando...",
+      "btnSend": "Enviar Mensagem"
+    },
+    "info": {
+      "addressTitle": "Endereço",
+      "addressLine1": "Av. do Trabalho, Nº 123",
+      "addressLine2": "Cidade da Matola",
+      "addressLine3": "Província de Maputo",
+      "phoneTitle": "Telefone",
+      "emailTitle": "Email",
+      "timeTitle": "Horário",
+      "timeLine1": "Segunda a Sexta",
+      "timeLine2": "08:00 — 16:00"
+    }
+  },
+  "Login": {
+    "brandEyebrow": "61ª Edição · Agosto 2026",
+    "brandTitle": "A Caminho da",
+    "brandDesc": "Aceda à sua área reservada para gerir a sua candidatura, carregar documentos e acompanhar o estado da sua participação.",
+    "formTitle": "Iniciar Sessão",
+    "formSub": "Insira as suas credenciais para aceder à plataforma",
+    "lblEmail": "Email",
+    "plhEmail": "email@exemplo.com",
+    "lblPassword": "Palavra-passe",
+    "plhPassword": "••••••••",
+    "btnLogin": "Entrar",
+    "btnLoggingIn": "Entrando...",
+    "noAccount": "Não tem conta?",
+    "linkRegister": "Inscreva a sua empresa",
+    "linkSponsor": "Acesso para patrocinadores →",
+    "errConnection": "Erro de ligação. Verifique a sua internet.",
+    "errLogin": "Erro ao iniciar sessão",
+    "alertError": "Erro"
+  },
+  "Registar": {
+    "brandEyebrow": "Inscrição de Expositor",
+    "brandTitle": "Participe na",
+    "brandDesc": "Registe a sua empresa em poucos minutos. O processo é 100% digital e pode acompanhar todo o estado da sua candidatura através da plataforma.",
+    "step1Label": "Conta",
+    "step2Label": "Empresa",
+    "step1Title": "Criar Conta",
+    "step1Sub": "Informações de acesso à plataforma",
+    "step2Title": "Dados da Empresa",
+    "step2Sub": "Informações sobre a sua empresa",
+    "errMissing": "Preencha todos os campos obrigatórios",
+    "errMismatch": "As palavras-passe não coincidem",
+    "errLength": "A palavra-passe deve ter pelo menos 8 caracteres",
+    "errRegister": "Erro ao criar conta",
+    "errCompany": "Erro ao registar empresa",
+    "errConnection": "Erro de ligação. Verifique a sua internet.",
+    "lblName": "Nome Completo *",
+    "plhName": "O seu nome",
+    "lblPhone": "Telefone",
+    "plhPhone": "+258 8X XXX XXXX",
+    "lblPassword": "Palavra-passe *",
+    "plhPassword": "Mínimo 8 caracteres",
+    "hintPassword": "Deve conter maiúscula, minúscula e número",
+    "lblConfirm": "Confirmar Palavra-passe *",
+    "plhConfirm": "Repita a palavra-passe",
+    "btnContinue": "Continuar →",
+    "lblCompanyName": "Nome da Empresa *",
+    "plhCompanyName": "Ex: ABC Lda.",
+    "lblNuit": "NUIT *",
+    "plhNuit": "400XXXXXXX",
+    "lblSector": "Sector de Actividade *",
+    "lblDistrict": "Distrito *",
+    "optionSelect": "Seleccionar...",
+    "lblCompPhone": "Telefone da Empresa",
+    "plhCompPhone": "+258 21 XXX XXX",
+    "lblCompEmail": "Email da Empresa",
+    "plhCompEmail": "empresa@exemplo.com",
+    "lblDesc": "Descrição da Empresa",
+    "plhDesc": "Breve descrição da actividade da empresa...",
+    "btnBack": "← Voltar",
+    "btnRegister": "Registar Empresa",
+    "btnRegistering": "Registando...",
+    "hasAccount": "Já tem conta?",
+    "linkLogin": "Iniciar sessão",
+    "alertAttention": "Atenção"
+  },
+  "Cronograma": {
+    "hero": {
+      "eyebrow": "Calendário",
+      "title": "Cronograma",
+      "sub": "Acompanhe as fases de preparação e não perca nenhuma data importante até à realização da 61ª Edição da FACIM."
+    },
+    "legend": {
+      "title": "Legenda de Estado",
+      "concluido": "Concluído",
+      "emCurso": "Em Curso",
+      "pendente": "Pendente",
+      "evento": "Data do Evento"
+    },
+    "fases": [
+      {
+        "mes": "Junho 2026",
+        "fase": "Fase de Mobilização",
+        "actividades": [
+          {
+            "dia": "1 a 15",
+            "titulo": "Lançamento da Campanha",
+            "desc": "Apresentação oficial da plataforma digital e início da campanha de sensibilização nos 8 distritos da Província de Maputo."
+          },
+          {
+            "dia": "15 a 30",
+            "titulo": "Reuniões Distritais",
+            "desc": "Encontros com associações empresariais locais e Serviços Distritais de Actividades Económicas (SDAE)."
+          }
+        ]
+      },
+      {
+        "mes": "Julho 2026",
+        "fase": "Inscrições e Selecção",
+        "actividades": [
+          {
+            "dia": "1 a 20",
+            "titulo": "Período de Inscrições",
+            "desc": "Registo de empresas expositoras através da plataforma. Submissão de candidaturas e documentação."
+          },
+          {
+            "dia": "21 a 25",
+            "titulo": "Análise de Candidaturas",
+            "desc": "Avaliação das empresas inscritas pela comissão organizadora para garantir a representatividade sectorial e distrital."
+          },
+          {
+            "dia": "26 a 31",
+            "titulo": "Notificação e Confirmação",
+            "desc": "Comunicação oficial às empresas seleccionadas e fecho de acordos de patrocínio."
+          }
+        ]
+      },
+      {
+        "mes": "Agosto 2026",
+        "fase": "Preparação Final e Feira",
+        "actividades": [
+          {
+            "dia": "1 a 15",
+            "titulo": "Preparação Logística",
+            "desc": "Desenho dos stands, produção de material promocional e alocação de espaços no Pavilhão da Província de Maputo."
+          },
+          {
+            "dia": "16 a 20",
+            "titulo": "Formação para Expositores",
+            "desc": "Sessões de capacitação sobre técnicas de vendas, atendimento e networking para as equipas que estarão na feira."
+          },
+          {
+            "dia": "24",
+            "titulo": "Montagem dos Stands",
+            "desc": "Acesso ao recinto de Ricatla para montagem e decoração final dos espaços de exposição."
+          },
+          {
+            "dia": "25 a 31",
+            "titulo": "Realização da FACIM 2026",
+            "desc": "Exposição, rondas de negócios, seminários e apresentação do potencial da Província de Maputo ao mundo."
+          }
+        ]
+      },
+      {
+        "mes": "Setembro 2026",
+        "fase": "Pós-Feira",
+        "actividades": [
+          {
+            "dia": "1 a 15",
+            "titulo": "Avaliação e Relatório",
+            "desc": "Recolha de feedback junto dos expositores e produção do relatório final de participação da Província de Maputo."
+          }
+        ]
+      }
+    ]
+  },
+  "Noticias": {
+    "hero": {
+      "eyebrow": "Comunicação",
+      "title": "Notícias",
+      "sub": "Acompanhe as últimas actualizações sobre a preparação da Província de Maputo para a FACIM 2026."
+    },
+    "readMore": "Ler mais →",
+    "allNews": "Todas as Notícias",
+    "items": [
+      {
+        "titulo": "Lançamento da Plataforma FACIM 2026",
+        "resumo": "A Direcção Provincial da Indústria e Comércio de Maputo anuncia o lançamento da plataforma digital para gestão da participação na FACIM 2026.",
+        "categoria": "Institucional",
+        "data": "12 Jun 2026"
+      },
+      {
+        "titulo": "Abertura das Inscrições para Expositores",
+        "resumo": "As inscrições para participação como expositor na FACIM 2026 estão oficialmente abertas. Empresas da Província de Maputo podem registar-se através da plataforma.",
+        "categoria": "Inscrições",
+        "data": "12 Jun 2026"
+      },
+      {
+        "titulo": "Reunião Preparatória com os Distritos",
+        "resumo": "Realizou-se a primeira reunião preparatória com representantes dos 8 distritos da Província de Maputo para coordenar a participação na FACIM.",
+        "categoria": "Preparação",
+        "data": "10 Jun 2026"
+      },
+      {
+        "titulo": "Pacotes de Patrocínio Já Disponíveis",
+        "resumo": "Conheça os quatro pacotes de patrocínio — Platinum, Gold, Silver e Bronze — e associe a sua marca à maior feira de Moçambique.",
+        "categoria": "Patrocínios",
+        "data": "8 Jun 2026"
+      },
+      {
+        "titulo": "Calendário de Actividades Preparatórias",
+        "resumo": "O calendário com todas as actividades preparatórias para a FACIM 2026 já está disponível. Consulte as datas importantes na secção de Cronograma.",
+        "categoria": "Cronograma",
+        "data": "5 Jun 2026"
+      },
+      {
+        "titulo": "Formação para Empresas Participantes",
+        "resumo": "Série de formações para empresas inscritas sobre como maximizar a sua presença na FACIM 2026, incluindo técnicas de exposição e networking.",
+        "categoria": "Formação",
+        "data": "2 Jun 2026"
+      }
+    ]
+  },
+  "Patrocinadores": {
+    "hero": {
+      "eyebrow": "Patrocínios · FACIM 2026",
+      "title": "Associe a Sua",
+      "highlight": "Marca",
+      "sub": "Apoie a participação da Província de Maputo na FACIM 2026 e garanta visibilidade para a sua empresa junto de milhares de visitantes."
+    },
+    "section": {
+      "eyebrow": "Pacotes Disponíveis",
+      "title": "Escolha o Pacote Ideal",
+      "sub": "Quatro níveis de patrocínio com benefícios progressivos, adaptados à dimensão e objectivos da sua empresa."
+    },
+    "btnInterest": "Manifestar Interesse",
+    "cta": {
+      "title": "Tem Dúvidas sobre os Pacotes?",
+      "desc": "A nossa equipa está disponível para ajudar a encontrar o pacote ideal para a sua empresa.",
+      "btnContact": "Fale Connosco",
+      "btnRegister": "Registar como Patrocinador"
+    },
+    "packages": [
+      {
+        "nome": "Platinum",
+        "nivel": "Visibilidade Máxima",
+        "beneficios": [
+          "Logotipo em todos os materiais promocionais",
+          "Stand exclusivo em localização premium",
+          "Menção em todos os discursos oficiais",
+          "Entrevistas na cobertura mediática",
+          "Banner principal no website",
+          "Espaço para activação de marca",
+          "Convites VIP para todas as actividades",
+          "Relatório exclusivo pós-evento"
+        ]
+      },
+      {
+        "nome": "Gold",
+        "nivel": "Exposição Premium",
+        "beneficios": [
+          "Logotipo nos materiais promocionais",
+          "Stand em localização de destaque",
+          "Menção nos discursos de abertura",
+          "Banner secundário no website",
+          "Espaço para demonstração de produtos",
+          "Convites para actividades VIP",
+          "Certificado de patrocinador Gold"
+        ]
+      },
+      {
+        "nome": "Silver",
+        "nivel": "Presença Sólida",
+        "beneficios": [
+          "Logotipo no banner de patrocinadores",
+          "Stand standard",
+          "Menção no catálogo oficial",
+          "Logo no website",
+          "Convites para cerimónia de abertura",
+          "Certificado de patrocinador Silver"
+        ]
+      },
+      {
+        "nome": "Bronze",
+        "nivel": "Participação Base",
+        "beneficios": [
+          "Logotipo no website",
+          "Menção no catálogo oficial",
+          "Stand base partilhado",
+          "Convites para visita à feira",
+          "Certificado de participação"
+        ]
+      }
+    ]
+  }
+}

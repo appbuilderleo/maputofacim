@@ -1,0 +1,483 @@
+{
+  "Header": {
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "registerCompany": "Inscrire l'entreprise",
+    "menu": "Menu"
+  },
+  "LocaleSwitcher": {
+    "label": "Changer de langue",
+    "pt": "PT",
+    "en": "EN",
+    "es": "ES",
+    "fr": "FR",
+    "zh": "ZH",
+    "ru": "RU"
+  },
+  "Home": {
+    "Hero": {
+      "eyebrow": "61ème Édition · Août 2026 · Maputo",
+      "title": "En route pour la",
+      "highlight": "FACIM",
+      "subtitle": "La province de Maputo prépare sa participation à la plus grande foire internationale du Mozambique. Rejoignez des centaines d'entreprises et montrez le potentiel de notre région.",
+      "registerBtn": "Inscrire l'entreprise",
+      "learnMoreBtn": "En Savoir Plus",
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes"
+    },
+    "Stats": {
+      "exhibitors": "Exposants Attendus",
+      "districts": "Districts Participants",
+      "sectors": "Secteurs d'Activité",
+      "visitors": "Visiteurs Estimés"
+    },
+    "About": {
+      "eyebrow": "À propos de la Campagne",
+      "title": "Montrer le Potentiel de Maputo au Monde",
+      "p1": "La Direction Provinciale de l'Industrie et du Commerce coordonne la participation de la province de Maputo à la FACIM 2026, mobilisant les entreprises des 8 districts pour une démonstration collective de force économique, d'innovation et de capacité productive.",
+      "p2": "Cette plateforme centralise l'ensemble du processus — de l'inscription à la participation — garantissant transparence, efficacité et une expérience numérique moderne pour tous les acteurs.",
+      "btn": "Découvrir la Campagne",
+      "objectiveTitle": "Objectif",
+      "objectiveDesc": "Numériser et centraliser toute la gestion de la participation provinciale",
+      "impactTitle": "Impact",
+      "impactDesc": "Accroître la visibilité institutionnelle et la mobilisation des entreprises"
+    },
+    "Features": {
+      "eyebrow": "Fonctionnalités",
+      "title": "Tout sur une Seule Plateforme",
+      "subtitle": "Outils complets pour les exposants, les sponsors et l'équipe de gestion",
+      "items": {
+        "digital": {
+          "title": "Inscription Numérique",
+          "desc": "Inscrivez votre entreprise en ligne rapidement et facilement. Suivez l'état de votre candidature en temps réel."
+        },
+        "sponsorships": {
+          "title": "Sponsorings",
+          "desc": "Consultez les forfaits de parrainage disponibles et associez votre marque à la plus grande foire du Mozambique."
+        },
+        "schedule": {
+          "title": "Calendrier",
+          "desc": "Vérifiez toutes les activités préparatoires et les dates importantes pour la FACIM 2026."
+        },
+        "dashboard": {
+          "title": "Tableau de Bord",
+          "desc": "Zone administrative avec des rapports complets, des statistiques et des outils de gestion."
+        }
+      }
+    },
+    "Sponsors": {
+      "eyebrow": "Sponsorings",
+      "title": "Associez votre Marque à la FACIM",
+      "subtitle": "Choisissez le forfait idéal pour votre entreprise et garantissez une visibilité à la plus grande foire du Mozambique",
+      "btn": "Voir les Forfaits de Parrainage",
+      "packages": {
+        "platinum": "Visibilité maximale",
+        "gold": "Exposition premium",
+        "silver": "Présence solide",
+        "bronze": "Participation de base"
+      }
+    },
+    "CTA": {
+      "eyebrow": "Inscriptions Ouvertes",
+      "title": "Inscrivez votre Entreprise Maintenant",
+      "desc": "Le processus est simple et numérique. Inscrivez-vous, soumettez votre candidature et suivez tout le processus via la plateforme.",
+      "registerBtn": "Inscrire l'Entreprise",
+      "contactBtn": "Nous Contacter"
+    }
+  },
+  "Sobre": {
+    "hero": {
+      "eyebrow": "À propos de la Campagne",
+      "title": "En route pour la",
+      "highlight": "FACIM 2026",
+      "sub": "La Direction Provinciale de l'Industrie et du Commerce de Maputo coordonne la préparation, la promotion et la gestion de la participation de la province de Maputo à la 61ème édition de la Foire Agricole, Commerciale et Industrielle du Mozambique."
+    },
+    "mission": {
+      "eyebrow": "Mission",
+      "title": "Montrer le Potentiel Économique de Maputo",
+      "p1": "La campagne \"En route pour la FACIM\" vise à mobiliser les entreprises des 8 districts de la province de Maputo pour une participation collective, organisée et percutante à la plus grande foire internationale du Mozambique.",
+      "p2": "Grâce à cette plateforme numérique, nous avons l'intention de moderniser toute la logistique de préparation — de l'inscription en ligne à la gestion des parrainages et de la communication institutionnelle — garantissant l'efficacité, la transparence et l'accessibilité.",
+      "stats": {
+        "edition": "Édition de la FACIM",
+        "districts": "Districts Participants",
+        "companies": "Entreprises Prévues",
+        "sectors": "Secteurs d'Activité"
+      }
+    },
+    "objectives": {
+      "eyebrow": "Objectifs",
+      "title": "Ce Que Nous Voulons Atteindre",
+      "items": [
+        {
+          "title": "Numériser le Processus",
+          "desc": "Transformer les processus d'inscription et de gestion manuels en un système numérique intégré et accessible."
+        },
+        {
+          "title": "Gérer les Exposants",
+          "desc": "Centraliser l'inscription, le suivi et l'approbation des entreprises souhaitant participer à la FACIM."
+        },
+        {
+          "title": "Gérer les Sponsors",
+          "desc": "Offrir des forfaits de parrainage attrayants et gérer l'ensemble du processus de manière transparente."
+        },
+        {
+          "title": "Promouvoir les Activités",
+          "desc": "Tenir tous les participants informés des dates, des événements et des activités préparatoires."
+        },
+        {
+          "title": "Centraliser la Documentation",
+          "desc": "Stocker et gérer toute la documentation dans un seul endroit sûr et accessible."
+        },
+        {
+          "title": "Produire des Rapports",
+          "desc": "Générer des statistiques et des rapports en temps réel pour soutenir la prise de décision."
+        }
+      ]
+    },
+    "timeline": {
+      "eyebrow": "Phases",
+      "title": "Calendrier de la Campagne",
+      "phases": [
+        {
+          "phase": "Phase 1",
+          "title": "Mobilisation",
+          "period": "Juin – Juillet 2026"
+        },
+        {
+          "phase": "Phase 2",
+          "title": "Inscriptions et Préparation",
+          "period": "Juillet 2026"
+        },
+        {
+          "phase": "Phase 3",
+          "title": "FACIM 2026",
+          "period": "Août 2026"
+        },
+        {
+          "phase": "Phase 4",
+          "title": "Post-Foire et Rapport",
+          "period": "Septembre 2026"
+        }
+      ]
+    },
+    "org": {
+      "name": "Direction Provinciale de l'Industrie et du Commerce",
+      "sub": "Province de Maputo — République du Mozambique",
+      "desc": "Organisme responsable de la coordination et de la promotion de l'activité industrielle et commerciale dans la province de Maputo, y compris l'organisation de la participation provinciale aux foires et événements."
+    }
+  },
+  "Contactos": {
+    "hero": {
+      "eyebrow": "Parlez-nous",
+      "title": "Contacts",
+      "sub": "Avez-vous des questions sur la participation à la FACIM 2026 ? Contactez l'équipe de la Direction Provinciale de l'Industrie et du Commerce."
+    },
+    "form": {
+      "title": "Envoyez-nous un Message",
+      "sub": "Nous vous répondrons dans un délai maximum de 48 heures ouvrables.",
+      "alertSuccessTitle": "Message Envoyé",
+      "alertSuccessText": "Votre message a été reçu avec succès. Nous vous contacterons sous peu.",
+      "alertErrorTitle": "Erreur d'Envoi",
+      "alertErrorText": "Une erreur s'est produite. Veuillez réessayer ou nous contacter par téléphone.",
+      "lblName": "Nom Complet",
+      "plhName": "Votre nom",
+      "lblEmail": "Email",
+      "plhEmail": "email@exemple.com",
+      "lblPhone": "Téléphone",
+      "plhPhone": "+258 8X XXX XXXX",
+      "lblSubject": "Sujet",
+      "plhSubject": "Motif du contact",
+      "lblMessage": "Message",
+      "plhMessage": "Écrivez votre message...",
+      "btnSending": "Envoi en cours...",
+      "btnSend": "Envoyer le Message"
+    },
+    "info": {
+      "addressTitle": "Adresse",
+      "addressLine1": "Av. do Trabalho, Nº 123",
+      "addressLine2": "Ville de Matola",
+      "addressLine3": "Province de Maputo",
+      "phoneTitle": "Téléphone",
+      "emailTitle": "Email",
+      "timeTitle": "Horaires",
+      "timeLine1": "Lundi au Vendredi",
+      "timeLine2": "08:00 — 16:00"
+    }
+  },
+  "Login": {
+    "brandEyebrow": "61ème Édition · Août 2026",
+    "brandTitle": "En route pour",
+    "brandDesc": "Accédez à votre espace réservé pour gérer votre candidature, télécharger des documents et suivre l'état de votre participation.",
+    "formTitle": "Se Connecter",
+    "formSub": "Entrez vos identifiants pour accéder à la plateforme",
+    "lblEmail": "Email",
+    "plhEmail": "email@exemple.com",
+    "lblPassword": "Mot de passe",
+    "plhPassword": "••••••••",
+    "btnLogin": "Connexion",
+    "btnLoggingIn": "Connexion en cours...",
+    "noAccount": "Vous n'avez pas de compte ?",
+    "linkRegister": "Inscrivez votre entreprise",
+    "linkSponsor": "Accès pour les sponsors →",
+    "errConnection": "Erreur de connexion. Vérifiez votre internet.",
+    "errLogin": "Erreur de connexion",
+    "alertError": "Erreur"
+  },
+  "Registar": {
+    "brandEyebrow": "Inscription Exposant",
+    "brandTitle": "Participez à",
+    "brandDesc": "Inscrivez votre entreprise en quelques minutes. Le processus est 100% numérique et vous pouvez suivre tout l'état de votre candidature via la plateforme.",
+    "step1Label": "Compte",
+    "step2Label": "Entreprise",
+    "step1Title": "Créer un Compte",
+    "step1Sub": "Informations d'accès à la plateforme",
+    "step2Title": "Données de l'Entreprise",
+    "step2Sub": "Informations sur votre entreprise",
+    "errMissing": "Remplissez tous les champs obligatoires",
+    "errMismatch": "Les mots de passe ne correspondent pas",
+    "errLength": "Le mot de passe doit comporter au moins 8 caractères",
+    "errRegister": "Erreur lors de la création du compte",
+    "errCompany": "Erreur lors de l'enregistrement de l'entreprise",
+    "errConnection": "Erreur de connexion. Vérifiez votre internet.",
+    "lblName": "Nom Complet *",
+    "plhName": "Votre nom",
+    "lblPhone": "Téléphone",
+    "plhPhone": "+258 8X XXX XXXX",
+    "lblPassword": "Mot de passe *",
+    "plhPassword": "Minimum 8 caractères",
+    "hintPassword": "Doit contenir une majuscule, une minuscule et un chiffre",
+    "lblConfirm": "Confirmer le mot de passe *",
+    "plhConfirm": "Répétez le mot de passe",
+    "btnContinue": "Continuer →",
+    "lblCompanyName": "Nom de l'Entreprise *",
+    "plhCompanyName": "Ex: ABC Lda.",
+    "lblNuit": "NUIT *",
+    "plhNuit": "400XXXXXXX",
+    "lblSector": "Secteur d'Activité *",
+    "lblDistrict": "District *",
+    "optionSelect": "Sélectionner...",
+    "lblCompPhone": "Téléphone de l'Entreprise",
+    "plhCompPhone": "+258 21 XXX XXX",
+    "lblCompEmail": "Email de l'Entreprise",
+    "plhCompEmail": "entreprise@exemple.com",
+    "lblDesc": "Description de l'Entreprise",
+    "plhDesc": "Brève description de l'activité de l'entreprise...",
+    "btnBack": "← Retour",
+    "btnRegister": "Enregistrer l'Entreprise",
+    "btnRegistering": "Enregistrement...",
+    "hasAccount": "Vous avez déjà un compte ?",
+    "linkLogin": "Se connecter",
+    "alertAttention": "Attention"
+  },
+  "Cronograma": {
+    "hero": {
+      "eyebrow": "Calendrier",
+      "title": "Chronologie",
+      "sub": "Suivez les phases de préparation et ne manquez aucune date de la FACIM."
+    },
+    "legend": {
+      "title": "Légende",
+      "concluido": "Terminé",
+      "emCurso": "En cours",
+      "pendente": "En attente",
+      "evento": "Date de l'événement"
+    },
+    "fases": [
+      {
+        "mes": "Juin 2026",
+        "fase": "Phase de Mobilisation",
+        "actividades": [
+          {
+            "dia": "1 au 15",
+            "titulo": "Lancement",
+            "desc": "Présentation de la plateforme."
+          },
+          {
+            "dia": "15 au 30",
+            "titulo": "Réunions",
+            "desc": "Rencontres avec les associations locales."
+          }
+        ]
+      },
+      {
+        "mes": "Juillet 2026",
+        "fase": "Inscriptions",
+        "actividades": [
+          {
+            "dia": "1 au 20",
+            "titulo": "Période d'inscription",
+            "desc": "Enregistrement des entreprises."
+          },
+          {
+            "dia": "21 au 25",
+            "titulo": "Analyse",
+            "desc": "Évaluation des entreprises."
+          },
+          {
+            "dia": "26 au 31",
+            "titulo": "Notification",
+            "desc": "Communication aux entreprises."
+          }
+        ]
+      },
+      {
+        "mes": "Août 2026",
+        "fase": "Préparation et Foire",
+        "actividades": [
+          {
+            "dia": "1 au 15",
+            "titulo": "Préparation logistique",
+            "desc": "Conception des stands."
+          },
+          {
+            "dia": "16 au 20",
+            "titulo": "Formation",
+            "desc": "Sessions de formation."
+          },
+          {
+            "dia": "24",
+            "titulo": "Montage",
+            "desc": "Accès à Ricatla."
+          },
+          {
+            "dia": "25 au 31",
+            "titulo": "FACIM 2026",
+            "desc": "Exposition, affaires."
+          }
+        ]
+      },
+      {
+        "mes": "Septembre 2026",
+        "fase": "Post-Foire",
+        "actividades": [
+          {
+            "dia": "1 au 15",
+            "titulo": "Évaluation",
+            "desc": "Collecte de commentaires."
+          }
+        ]
+      }
+    ]
+  },
+  "Noticias": {
+    "hero": {
+      "eyebrow": "Communication",
+      "title": "Actualités",
+      "sub": "Suivez les dernières mises à jour sur la préparation pour FACIM 2026."
+    },
+    "readMore": "Lire la suite →",
+    "allNews": "Toutes les Actualités",
+    "items": [
+      {
+        "titulo": "Lancement de la plateforme FACIM 2026",
+        "resumo": "Lancement de la plateforme numérique.",
+        "categoria": "Institutionnel",
+        "data": "12 Jun 2026"
+      },
+      {
+        "titulo": "Ouverture des inscriptions",
+        "resumo": "Les inscriptions sont officiellement ouvertes.",
+        "categoria": "Inscriptions",
+        "data": "12 Jun 2026"
+      },
+      {
+        "titulo": "Réunion préparatoire",
+        "resumo": "La première réunion préparatoire a eu lieu.",
+        "categoria": "Préparation",
+        "data": "10 Jun 2026"
+      },
+      {
+        "titulo": "Forfaits de parrainage",
+        "resumo": "Découvrez les quatre forfaits de parrainage.",
+        "categoria": "Parrainages",
+        "data": "8 Jun 2026"
+      },
+      {
+        "titulo": "Calendrier des activités",
+        "resumo": "Le calendrier est disponible.",
+        "categoria": "Chronologie",
+        "data": "5 Jun 2026"
+      },
+      {
+        "titulo": "Formation pour les entreprises",
+        "resumo": "Série de formations pour les entreprises.",
+        "categoria": "Formation",
+        "data": "2 Jun 2026"
+      }
+    ]
+  },
+  "Patrocinadores": {
+    "hero": {
+      "eyebrow": "Parrainages · FACIM 2026",
+      "title": "Associez votre",
+      "highlight": "Marque",
+      "sub": "Soutenez la participation de la province de Maputo."
+    },
+    "section": {
+      "eyebrow": "Forfaits Disponibles",
+      "title": "Choisissez le Forfait Idéal",
+      "sub": "Quatre niveaux de parrainage avec des avantages progressifs."
+    },
+    "btnInterest": "Exprimer son Intérêt",
+    "cta": {
+      "title": "Questions sur les forfaits ?",
+      "desc": "Notre équipe est disponible pour vous aider.",
+      "btnContact": "Contactez-nous",
+      "btnRegister": "S'inscrire comme Sponsor"
+    },
+    "packages": [
+      {
+        "nome": "Platinum",
+        "nivel": "Visibilité Maximale",
+        "beneficios": [
+          "Logo sur le matériel promotionnel",
+          "Stand exclusif",
+          "Mention dans les discours",
+          "Entretiens",
+          "Bannière principale",
+          "Espace d'activation",
+          "Invitations VIP",
+          "Rapport exclusif"
+        ]
+      },
+      {
+        "nome": "Gold",
+        "nivel": "Exposition Premium",
+        "beneficios": [
+          "Logo sur le matériel",
+          "Stand en évidence",
+          "Mention d'ouverture",
+          "Bannière secondaire",
+          "Espace de démonstration",
+          "Invitations VIP",
+          "Certificat Gold"
+        ]
+      },
+      {
+        "nome": "Silver",
+        "nivel": "Présence Solide",
+        "beneficios": [
+          "Logo sur la bannière",
+          "Stand standard",
+          "Mention au catalogue",
+          "Logo sur le site web",
+          "Invitations d'ouverture",
+          "Certificat Silver"
+        ]
+      },
+      {
+        "nome": "Bronze",
+        "nivel": "Participation de Base",
+        "beneficios": [
+          "Logo sur le site web",
+          "Mention au catalogue",
+          "Stand partagé",
+          "Invitations",
+          "Certificat"
+        ]
+      }
+    ]
+  }
+}

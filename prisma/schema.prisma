@@ -169,6 +169,7 @@ model Noticia {
   resumo      String    @db.String(500)
   conteudo    String    @db.String(10000)
   imagem      String?
+  videoLink   String?
   categoria   String?
   destaque    Boolean   @default(false)
   publicado   Boolean   @default(false)

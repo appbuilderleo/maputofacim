@@ -1,0 +1,214 @@
+/* ══════════════════════════════════════════════════════════════
+   Patrocinadores — FACIM 2026
+   ══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--facim-dark);
+  color: white;
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--facim-gold-light);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: var(--space-4);
+}
+
+.highlight { color: var(--facim-gold-light); }
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Shared ─────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.sectionSub {
+  font-size: 15px;
+  color: var(--facim-gray-400);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Packages Section ───────────────────────────────────────── */
+.packagesSection {
+  padding: var(--space-16) 0;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+.packageCard {
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.packageCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.pkgPlatinum { background: linear-gradient(135deg, #F4F4FA, #EEEEF5); border-color: #C4BCDE; }
+.pkgGold { background: linear-gradient(135deg, #FFFAED, #FFF3D4); border-color: #E8C45F; }
+.pkgSilver { background: linear-gradient(135deg, #F8F8F8, #EFEFEF); border-color: #CACACA; }
+.pkgBronze { background: linear-gradient(135deg, #FFF4ED, #FFE8D8); border-color: #D08A5A; }
+
+.packageHeader {
+  text-align: center;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.packageIcon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.packageName {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 900;
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.packageNivel {
+  font-size: 12px;
+  color: var(--facim-gray-400);
+}
+
+.beneficiosList {
+  list-style: none;
+  padding: 0;
+  flex: 1;
+  margin-bottom: var(--space-5);
+}
+
+.beneficiosList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--facim-gray-600);
+  padding: 6px 0;
+  line-height: 1.4;
+}
+
+.beneficiosList li i {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.packageBtn {
+  background: transparent;
+  border: 2px solid;
+  font-weight: 700;
+}
+
+.packageBtn:hover {
+  opacity: 0.85;
+}
+
+/* ── CTA ────────────────────────────────────────────────────── */
+.ctaSection {
+  padding: 0 0 var(--space-16);
+}
+
+.ctaCard {
+  background: var(--facim-dark);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12);
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: var(--space-3);
+}
+
+.ctaCard p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: var(--space-6);
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .packagesGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .heroTitle { font-size: 26px; }
+  .packagesGrid { grid-template-columns: 1fr; }
+  .ctaCard { padding: var(--space-8) var(--space-4); }
+  .ctaCard h2 { font-size: 20px; }
+  .container { padding: 0 var(--space-4); }
+}

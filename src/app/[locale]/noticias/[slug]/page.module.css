@@ -1,0 +1,122 @@
+.articleHero {
+  padding: var(--space-8) 0;
+  background: var(--facim-off-white);
+  border-bottom: 1px solid var(--facim-gray-200);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.date {
+  font-size: 14px;
+  color: var(--facim-gray-500);
+  font-weight: 500;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.resumo {
+  font-size: 20px;
+  color: var(--facim-gray-600);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.coverImage {
+  width: 100%;
+  height: 400px;
+  background: var(--facim-gray-200);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-8);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justifyContent: center;
+}
+
+.coverImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.articleBody {
+  padding: var(--space-12) 0;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--facim-dark);
+  white-space: pre-wrap;
+}
+
+.content p {
+  margin-bottom: var(--space-6);
+}
+
+.videoSection {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--facim-gray-200);
+}
+
+.videoContainer {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--facim-orange);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: var(--space-6);
+  transition: opacity 0.2s;
+}
+
+.backLink:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+  .resumo {
+    font-size: 18px;
+  }
+  .coverImage {
+    height: 250px;
+  }
+}

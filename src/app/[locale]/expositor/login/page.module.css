@@ -1,0 +1,241 @@
+/* ══════════════════════════════════════════════════════════════
+   Auth Pages — FACIM 2026
+   ══════════════════════════════════════════════════════════════ */
+
+.authPage {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+  margin-top: calc(-1 * var(--header-height));
+  padding-top: 0;
+}
+
+.authContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ── Brand Side ─────────────────────────────────────────────── */
+.brandSide {
+  background: var(--facim-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.brandContent {
+  position: relative;
+  z-index: 1;
+  max-width: 400px;
+}
+
+.brandEyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--facim-gold-light);
+  display: block;
+  margin-bottom: var(--space-4);
+}
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.brandTitle span {
+  color: var(--facim-orange-light);
+}
+
+.brandDesc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+}
+
+.brandDeco {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 60px solid rgba(232, 74, 0, 0.12);
+}
+
+.brandDeco2 {
+  position: absolute;
+  left: -40px;
+  bottom: -40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 40px solid rgba(245, 166, 35, 0.08);
+}
+
+/* ── Form Side ──────────────────────────────────────────────── */
+.formSide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-8);
+  background: var(--facim-off-white);
+}
+
+.formWrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+.formHeader {
+  margin-bottom: var(--space-6);
+}
+
+.formHeader h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-1);
+}
+
+.formHeader p {
+  font-size: 13px;
+  color: var(--facim-gray-400);
+}
+
+/* ── Password Field ─────────────────────────────────────────── */
+.passwordField {
+  position: relative;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--facim-gray-400);
+  font-size: 18px;
+  padding: 4px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.passwordToggle:hover {
+  color: var(--facim-orange);
+}
+
+/* ── Form Footer ────────────────────────────────────────────── */
+.formFooter {
+  text-align: center;
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--facim-gray-200);
+}
+
+.formFooter p {
+  font-size: 13px;
+  color: var(--facim-gray-400);
+}
+
+.linkOrange {
+  color: var(--facim-orange);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.linkOrange:hover {
+  text-decoration: underline;
+}
+
+.linkMuted {
+  color: var(--facim-gray-400);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.linkMuted:hover {
+  color: var(--facim-orange);
+}
+
+/* ── Steps (for registration) ───────────────────────────────── */
+.steps {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+}
+
+.stepDot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--facim-gray-200);
+  color: var(--facim-gray-400);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-1);
+  transition: all var(--transition-base);
+}
+
+.stepActive .stepDot {
+  background: var(--facim-orange);
+  color: white;
+}
+
+.stepDone .stepDot {
+  background: var(--facim-teal);
+  color: white;
+}
+
+.stepLabel {
+  font-size: 10px;
+  color: var(--facim-gray-400);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stepActive .stepLabel {
+  color: var(--facim-orange);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .authContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .brandSide {
+    display: none;
+  }
+
+  .formSide {
+    padding: calc(var(--header-height) + var(--space-8)) var(--space-6) var(--space-8);
+  }
+
+  .authPage {
+    margin-top: 0;
+  }
+}

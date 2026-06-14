@@ -1,0 +1,110 @@
+.sidebar {
+  width: 260px;
+  background: white;
+  border-right: 1px solid var(--facim-gray-200);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+
+.sidebarHeader {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--facim-gray-200);
+}
+
+.sidebarHeader h2 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-bottom: 2px;
+}
+
+.sidebarHeader p {
+  font-size: 12px;
+  color: var(--facim-orange);
+  font-weight: 600;
+}
+
+.sidebarNav {
+  padding: var(--space-4) 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 12px var(--space-6);
+  color: var(--facim-gray-600);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.navIcon {
+  font-size: 20px;
+  color: var(--facim-gray-400);
+  transition: color var(--transition-fast);
+}
+
+.navItem:hover {
+  background: var(--facim-off-white);
+  color: var(--facim-dark);
+}
+
+.navItem:hover .navIcon {
+  color: var(--facim-orange);
+}
+
+.navItemActive {
+  background: var(--badge-orange-bg);
+  color: var(--facim-orange);
+  border-left-color: var(--facim-orange);
+  font-weight: 600;
+}
+
+.navItemActive .navIcon {
+  color: var(--facim-orange);
+}
+
+.sidebarFooter {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--facim-gray-200);
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--facim-gray-500);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color var(--transition-fast);
+}
+
+.logoutBtn:hover {
+  color: var(--facim-danger);
+}
+
+.logoutBtn i {
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none; /* Em mobile, seria substituída por um menu inferior ou hamburger no header */
+  }
+}

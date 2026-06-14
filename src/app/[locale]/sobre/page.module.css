@@ -1,0 +1,299 @@
+/* ══════════════════════════════════════════════════════════════
+   Sobre — FACIM 2026
+   ══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--facim-dark);
+  color: white;
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--facim-gold-light);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.highlight { color: var(--facim-orange-light); }
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ── Sections Shared ────────────────────────────────────────── */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-top: var(--space-2);
+}
+
+.bodyText {
+  font-size: 15px;
+  color: var(--facim-gray-600);
+  line-height: 1.8;
+  margin-bottom: var(--space-4);
+}
+
+/* ── Mission ────────────────────────────────────────────────── */
+.missionSection {
+  padding: var(--space-16) 0;
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.missionStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.missionStat {
+  background: var(--facim-off-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: center;
+  border: 1px solid var(--facim-gray-200);
+}
+
+.missionStatNum {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--facim-orange);
+  display: block;
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.missionStatLabel {
+  font-size: 12px;
+  color: var(--facim-gray-400);
+}
+
+/* ── Objectives ─────────────────────────────────────────────── */
+.objectivesSection {
+  padding: var(--space-16) 0;
+  background: var(--facim-off-white);
+}
+
+.objectivesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.objectiveCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--facim-gray-200);
+  transition: all var(--transition-base);
+}
+
+.objectiveCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.objectiveIcon {
+  width: 44px;
+  height: 44px;
+  background: var(--badge-orange-bg);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--facim-orange);
+  font-size: 22px;
+  margin-bottom: var(--space-3);
+}
+
+.objectiveCard h3 {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-2);
+}
+
+.objectiveCard p {
+  font-size: 13px;
+  color: var(--facim-gray-400);
+  line-height: 1.6;
+}
+
+/* ── Timeline ───────────────────────────────────────────────── */
+.timelineSection {
+  padding: var(--space-16) 0;
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  position: relative;
+}
+
+.timelineGrid::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background: var(--facim-gray-200);
+  border-radius: 2px;
+}
+
+.timelineItem {
+  text-align: center;
+  padding-top: var(--space-10);
+  position: relative;
+}
+
+.timelineDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--facim-gray-300);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--facim-gray-300);
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timelineActive .timelineDot {
+  background: var(--facim-orange);
+  box-shadow: 0 0 0 2px var(--facim-orange), 0 0 0 6px rgba(232, 74, 0, 0.2);
+}
+
+.timelinePhase {
+  font-family: var(--font-display);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--facim-gray-400);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.timelineTitle {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-1);
+}
+
+.timelineActive .timelineTitle {
+  color: var(--facim-orange);
+}
+
+.timelinePeriod {
+  font-size: 12px;
+  color: var(--facim-gray-400);
+}
+
+/* ── Organization ───────────────────────────────────────────── */
+.orgSection {
+  padding: var(--space-16) 0;
+  background: var(--facim-off-white);
+}
+
+.orgCard {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--space-12);
+  text-align: center;
+  border: 1px solid var(--facim-gray-200);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.orgIcon {
+  font-size: 48px;
+  margin-bottom: var(--space-4);
+}
+
+.orgCard h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-2);
+}
+
+.orgSub {
+  font-size: 13px;
+  color: var(--facim-orange);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.orgDesc {
+  font-size: 14px;
+  color: var(--facim-gray-500);
+  line-height: 1.7;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .missionGrid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .objectivesGrid { grid-template-columns: repeat(2, 1fr); }
+  .timelineGrid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+  .timelineGrid::before { display: none; }
+}
+
+@media (max-width: 600px) {
+  .heroTitle { font-size: 26px; }
+  .objectivesGrid { grid-template-columns: 1fr; }
+  .timelineGrid { grid-template-columns: 1fr; }
+  .missionStats { grid-template-columns: 1fr 1fr; }
+  .orgCard { padding: var(--space-8) var(--space-4); }
+  .container { padding: 0 var(--space-4); }
+}

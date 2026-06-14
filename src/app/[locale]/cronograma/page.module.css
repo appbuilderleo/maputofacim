@@ -1,0 +1,305 @@
+/* ══════════════════════════════════════════════════════════════
+   Cronograma — FACIM 2026
+   ══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: var(--facim-dark);
+  color: white;
+  padding: var(--space-16) 0 var(--space-12);
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--facim-gold-light);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: var(--space-4);
+}
+
+.heroSub {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Timeline Section ───────────────────────────────────────── */
+.timelineSection {
+  padding: var(--space-16) 0;
+  background: var(--facim-off-white);
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.timelineWrapper {
+  position: relative;
+  margin-bottom: var(--space-12);
+}
+
+/* Vertical line */
+.timelineWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28px;
+  width: 2px;
+  background: var(--facim-gray-200);
+  z-index: 1;
+}
+
+/* ── Month Block ────────────────────────────────────────────── */
+.mesBlock {
+  margin-bottom: var(--space-12);
+  position: relative;
+  z-index: 2;
+}
+
+.mesHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.mesLabel {
+  background: white;
+  border: 1px solid var(--facim-gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-6);
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Connector to the main line */
+.mesLabel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--facim-dark);
+  transform: translateY(-50%);
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px var(--facim-gray-200);
+}
+
+.mesName {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--facim-dark);
+  padding-left: var(--space-4);
+}
+
+.mesFase {
+  font-size: 11px;
+  color: var(--facim-orange);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-left: var(--space-4);
+  margin-top: 2px;
+}
+
+/* ── Activities List ────────────────────────────────────────── */
+.actividadesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding-left: 64px;
+}
+
+.actividadeCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--facim-gray-200);
+  padding: var(--space-5);
+  display: flex;
+  gap: var(--space-5);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.actividadeCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.actData {
+  min-width: 60px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.actDia {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--facim-dark);
+  line-height: 1;
+}
+
+.actData i {
+  font-size: 20px;
+}
+
+.actContent {
+  flex: 1;
+}
+
+.actTitle {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-1);
+}
+
+.actDesc {
+  font-size: 13px;
+  color: var(--facim-gray-500);
+  line-height: 1.6;
+}
+
+/* Status variants */
+.status-concluido {
+  border-left: 4px solid var(--facim-teal);
+}
+
+.status-concluido .actData i {
+  color: var(--facim-teal);
+}
+
+.status-em-curso {
+  border-left: 4px solid var(--facim-orange);
+}
+
+.status-em-curso .actData i {
+  color: var(--facim-orange);
+}
+
+.status-pendente {
+  border-left: 4px solid var(--facim-gray-300);
+  opacity: 0.8;
+}
+
+.status-destaque {
+  border-left: 4px solid var(--facim-gold);
+  background: var(--badge-gold-bg);
+  border-color: var(--facim-gold);
+}
+
+.status-destaque .actTitle {
+  color: #7A4A00;
+}
+
+.status-destaque .actDia {
+  color: #7A4A00;
+}
+
+/* ── Legend ─────────────────────────────────────────────────── */
+.legendWrapper {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  border: 1px solid var(--facim-gray-200);
+  margin-top: var(--space-12);
+}
+
+.legendTitle {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--facim-dark);
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+.legendGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  justify-content: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  color: var(--facim-gray-600);
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dotConcluido { background: var(--facim-teal); }
+.dotEmCurso { background: var(--facim-orange); }
+.dotPendente { background: var(--facim-gray-300); }
+.dotDestaque { background: var(--facim-gold); }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .heroTitle { font-size: 26px; }
+  
+  .timelineWrapper::before {
+    left: 20px;
+  }
+  
+  .actividadesList {
+    padding-left: 40px;
+  }
+  
+  .actividadeCard {
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4);
+  }
+  
+  .actData {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .actDia {
+    font-size: 16px;
+  }
+  
+  .legendGrid {
+    gap: var(--space-4);
+  }
+}
