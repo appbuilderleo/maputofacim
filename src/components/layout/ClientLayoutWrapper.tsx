@@ -9,9 +9,9 @@ export default function ClientLayoutWrapper({ children }: { children: React.Reac
   
   // Ocultar Navbar e Footer nos painéis com Sidebar
   const isDashboardPage = 
-    pathname.startsWith('/admin') || 
-    pathname.startsWith('/expositor/dashboard') || 
-    pathname.startsWith('/patrocinador/dashboard');
+    pathname.includes('/admin') || 
+    pathname.includes('/expositor/dashboard') || 
+    pathname.includes('/patrocinador/dashboard');
 
   return (
     <>
