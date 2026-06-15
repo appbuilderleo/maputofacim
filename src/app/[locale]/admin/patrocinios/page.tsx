@@ -48,7 +48,7 @@ export default async function AdminPatrociniosPage() {
         </div>
         
         <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <table className="responsive-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead>
               <tr style={{ borderBottom: '2px solid var(--facim-gray-200)', textAlign: 'left', color: 'var(--facim-gray-500)', background: 'white' }}>
                 <th style={{ padding: '16px 24px', fontWeight: 600 }}>Empresa Patrocinadora</th>
@@ -68,25 +68,25 @@ export default async function AdminPatrociniosPage() {
               ) : (
                 patrocinios.map(pat => (
                   <tr key={pat.id} style={{ borderBottom: '1px solid var(--facim-gray-100)' }}>
-                    <td style={{ padding: '16px 24px' }}>
+                    <td data-label="Empresa Patrocinadora" style={{ padding: '16px 24px' }}>
                       <div style={{ fontWeight: 600, color: 'var(--facim-dark)' }}>{pat.empresa.nome}</div>
                       <div style={{ fontSize: '12px', color: 'var(--facim-gray-400)' }}>NUIT: {pat.empresa.nuit}</div>
                     </td>
-                    <td style={{ padding: '16px 24px' }}>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <td data-label="Pacote Escolhido" style={{ padding: '16px 24px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', justifyContent: 'flex-end' }}>
                         <i className="ti ti-star" style={{ color: 'var(--facim-gold)' }}></i>
                         <span style={{ fontWeight: 600, color: 'var(--facim-dark)' }}>{pat.pacote.nome}</span>
                       </div>
                     </td>
-                    <td style={{ padding: '16px 24px' }}>
+                    <td data-label="Estado" style={{ padding: '16px 24px' }}>
                       <span className={`badge ${pat.estado === 'CONFIRMADO' || pat.estado === 'APROVADO' ? 'badge-teal' : pat.estado === 'REJEITADO' ? 'badge-danger' : 'badge-orange'}`}>
                         {pat.estado.replace('_', ' ')}
                       </span>
                     </td>
-                    <td style={{ padding: '16px 24px', color: 'var(--facim-gray-500)' }}>
+                    <td data-label="Data de Solicitação" style={{ padding: '16px 24px', color: 'var(--facim-gray-500)' }}>
                       {pat.dataSolicitacao.toLocaleDateString('pt-PT')}
                     </td>
-                    <td style={{ padding: '16px 24px', textAlign: 'right' }}>
+                    <td data-label="Acções" style={{ padding: '16px 24px', textAlign: 'right' }}>
                       <Link href={`/admin/patrocinios/${pat.id}`} className="btn btn-ghost btn-sm" style={{ padding: '8px' }}>
                         <i className="ti ti-eye" style={{ fontSize: '18px' }}></i>
                       </Link>

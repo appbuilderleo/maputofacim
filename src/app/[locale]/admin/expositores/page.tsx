@@ -50,7 +50,7 @@ export default async function AdminExpositoresPage() {
         </div>
         
         <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <table className="responsive-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead>
               <tr style={{ borderBottom: '2px solid var(--facim-gray-200)', textAlign: 'left', color: 'var(--facim-gray-500)', background: 'white' }}>
                 <th style={{ padding: '16px 24px', fontWeight: 600 }}>Empresa</th>
@@ -70,13 +70,13 @@ export default async function AdminExpositoresPage() {
               ) : (
                 empresas.map(empresa => (
                   <tr key={empresa.id} style={{ borderBottom: '1px solid var(--facim-gray-100)' }}>
-                    <td style={{ padding: '16px 24px' }}>
+                    <td data-label="Empresa" style={{ padding: '16px 24px' }}>
                       <div style={{ fontWeight: 600, color: 'var(--facim-dark)' }}>{empresa.nome}</div>
                       <div style={{ fontSize: '12px', color: 'var(--facim-gray-400)' }}>NUIT: {empresa.nuit}</div>
                     </td>
-                    <td style={{ padding: '16px 24px', color: 'var(--facim-gray-600)' }}>{empresa.sectorActividade}</td>
-                    <td style={{ padding: '16px 24px', color: 'var(--facim-gray-600)' }}>{empresa.distrito}</td>
-                    <td style={{ padding: '16px 24px' }}>
+                    <td data-label="Sector" style={{ padding: '16px 24px', color: 'var(--facim-gray-600)' }}>{empresa.sectorActividade}</td>
+                    <td data-label="Distrito" style={{ padding: '16px 24px', color: 'var(--facim-gray-600)' }}>{empresa.distrito}</td>
+                    <td data-label="Estado Candidatura" style={{ padding: '16px 24px' }}>
                       {!empresa.candidatura ? (
                         <span className="badge badge-gray">Não Iniciada</span>
                       ) : (
@@ -85,7 +85,7 @@ export default async function AdminExpositoresPage() {
                         </span>
                       )}
                     </td>
-                    <td style={{ padding: '16px 24px', textAlign: 'right' }}>
+                    <td data-label="Acções" style={{ padding: '16px 24px', textAlign: 'right' }}>
                       <Link href={`/admin/expositores/${empresa.id}`} className="btn btn-ghost btn-sm" style={{ padding: '8px' }}>
                         <i className="ti ti-eye" style={{ fontSize: '18px' }}></i>
                       </Link>

@@ -34,7 +34,7 @@ export default async function AdminNoticiasPage() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '32px' }}>
         <div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--facim-dark)', marginBottom: '8px' }}>
             Notícias & Comunicação
@@ -51,7 +51,7 @@ export default async function AdminNoticiasPage() {
       </div>
 
       <div style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1px solid var(--facim-gray-200)', overflow: 'hidden' }}>
-        <div style={{ padding: '16px 24px', borderBottom: '1px solid var(--facim-gray-200)', background: '#FAFAFA', display: 'flex', gap: '16px' }}>
+        <div style={{ padding: '16px 24px', borderBottom: '1px solid var(--facim-gray-200)', background: '#FAFAFA', display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
           <input type="text" placeholder="Pesquisar título..." className="form-input" style={{ maxWidth: '300px' }} />
           <select className="form-select" style={{ maxWidth: '200px' }}>
             <option value="">Todos os Estados</option>
@@ -61,7 +61,7 @@ export default async function AdminNoticiasPage() {
         </div>
         
         <div style={{ overflowX: 'auto' }}>
-          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
+          <table className="responsive-table" style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px' }}>
             <thead>
               <tr style={{ borderBottom: '2px solid var(--facim-gray-200)', textAlign: 'left', color: 'var(--facim-gray-500)', background: 'white' }}>
                 <th style={{ padding: '16px 24px', fontWeight: 600 }}>Título e Resumo</th>
@@ -80,7 +80,7 @@ export default async function AdminNoticiasPage() {
               ) : (
                 noticias.map(noticia => (
                   <tr key={noticia.id} style={{ borderBottom: '1px solid var(--facim-gray-100)' }}>
-                    <td style={{ padding: '16px 24px', maxWidth: '400px' }}>
+                    <td data-label="Título e Resumo" style={{ padding: '16px 24px', maxWidth: '400px' }}>
                       <div style={{ fontWeight: 600, color: 'var(--facim-dark)', marginBottom: '4px' }}>
                         {noticia.destaque && <i className="ti ti-star-filled" style={{ color: 'var(--facim-gold)', marginRight: '8px' }}></i>}
                         {noticia.titulo}
@@ -89,13 +89,13 @@ export default async function AdminNoticiasPage() {
                         {noticia.resumo}
                       </div>
                     </td>
-                    <td style={{ padding: '16px 24px', color: 'var(--facim-gray-600)' }}>{noticia.autor.name}</td>
-                    <td style={{ padding: '16px 24px' }}>
+                    <td data-label="Autor" style={{ padding: '16px 24px', color: 'var(--facim-gray-600)' }}>{noticia.autor.name}</td>
+                    <td data-label="Estado" style={{ padding: '16px 24px' }}>
                       <span className={`badge ${noticia.publicado ? 'badge-teal' : 'badge-gray'}`}>
                         {noticia.publicado ? 'Publicado' : 'Rascunho'}
                       </span>
                     </td>
-                    <td style={{ padding: '16px 24px', textAlign: 'right' }}>
+                    <td data-label="Acções" style={{ padding: '16px 24px', textAlign: 'right' }}>
                       <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
                         <form action={togglePublicacao.bind(null, noticia.id, noticia.publicado)}>
                           <button type="submit" className="btn btn-ghost btn-sm" style={{ padding: '8px', color: noticia.publicado ? 'var(--facim-orange)' : 'var(--facim-teal)' }} title={noticia.publicado ? 'Ocultar' : 'Publicar'}>
