@@ -28,9 +28,9 @@ export default async function AdminDashboard() {
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           <Link href="/noticias" className="btn btn-ghost">Acesso ao Site</Link>
-          <button className="btn btn-primary">
+          <a href="/api/export/relatorio" download className="btn btn-primary" style={{ textDecoration: 'none' }}>
             Exportar Relatório
-          </button>
+          </a>
         </div>
       </div>
 

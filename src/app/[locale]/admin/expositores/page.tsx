@@ -32,9 +32,9 @@ export default async function AdminExpositoresPage() {
           </p>
         </div>
         <div>
-          <button className="btn btn-secondary">
+          <a href="/api/export/expositores" download className="btn btn-secondary" style={{ textDecoration: 'none', display: 'inline-block' }}>
             <i className="ti ti-download" aria-hidden="true"></i> Exportar Lista
-          </button>
+          </a>
         </div>
       </div>
 

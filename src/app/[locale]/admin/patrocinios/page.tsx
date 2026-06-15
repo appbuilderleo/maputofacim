@@ -68,7 +68,7 @@ export default async function AdminPatrociniosPage() {
               ) : (
                 patrocinios.map(pat => (
                   <tr key={pat.id} style={{ borderBottom: '1px solid var(--facim-gray-100)' }}>
-                    <td data-label="Empresa Patrocinadora" style={{ padding: '16px 24px' }}>
+                    <td data-label="Empresa" style={{ padding: '16px 24px' }}>
                       <div style={{ fontWeight: 600, color: 'var(--facim-dark)' }}>{pat.empresa.nome}</div>
                       <div style={{ fontSize: '12px', color: 'var(--facim-gray-400)' }}>NUIT: {pat.empresa.nuit}</div>
                     </td>
