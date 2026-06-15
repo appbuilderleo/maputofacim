@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from '../../expositor/layout.module.css'; // Podemos reutilizar o CSS base do dashboard
+import styles from './PatrocinadorSidebar.module.css';
 
 const PATROCINADOR_NAV = [
   { href: '/patrocinador/dashboard', label: 'Visão Geral', icon: 'ti-dashboard' },
@@ -14,17 +14,7 @@ export default function PatrocinadorSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside style={{
-      width: '260px',
-      background: 'white',
-      borderRight: '1px solid var(--facim-gray-200)',
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100vh',
-      position: 'sticky',
-      top: 0,
-      flexShrink: 0
-    }}>
+    <aside className={styles.sidebar}>
       <div style={{ padding: '24px', borderBottom: '1px solid var(--facim-gray-200)' }}>
         <img src="/logo.png" alt="FACIM Logo" style={{ height: '32px', marginBottom: '8px', objectFit: 'contain' }} />
         <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 800, color: 'var(--facim-dark)', marginBottom: '2px' }}>Área do Patrocinador</h2>

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import styles from '../../expositor/layout.module.css';
+import styles from './AdminSidebar.module.css';
 
 const ADMIN_NAV = [
   { href: '/admin', label: 'Dashboard', icon: 'ti-dashboard' },
@@ -17,17 +17,7 @@ export default function AdminSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside style={{
-      width: '260px',
-      background: '#0F2440',
-      color: 'white',
-      display: 'flex',
-      flexDirection: 'column',
-      height: '100vh',
-      position: 'sticky',
-      top: 0,
-      flexShrink: 0
-    }}>
+    <aside className={styles.sidebar}>
       <div style={{ padding: '24px', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
         <img src="/logo.png" alt="FACIM Logo" style={{ height: '32px', marginBottom: '8px', objectFit: 'contain' }} />
         <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 800, color: 'white', marginBottom: '2px' }}>Administração</h2>
