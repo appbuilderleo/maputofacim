@@ -20,7 +20,7 @@ export default async function AdminPatrociniosPage() {
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '32px' }}>
         <div>
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--facim-dark)', marginBottom: '8px' }}>
             Gestão de Patrocínios
@@ -37,7 +37,7 @@ export default async function AdminPatrociniosPage() {
       </div>
 
       <div style={{ background: 'white', borderRadius: 'var(--radius-lg)', border: '1px solid var(--facim-gray-200)', overflow: 'hidden' }}>
-        <div style={{ padding: '16px 24px', borderBottom: '1px solid var(--facim-gray-200)', background: '#FAFAFA', display: 'flex', gap: '16px' }}>
+        <div style={{ padding: '16px 24px', borderBottom: '1px solid var(--facim-gray-200)', background: '#FAFAFA', display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
           <input type="text" placeholder="Pesquisar Patrocinador..." className="form-input" style={{ maxWidth: '300px' }} />
           <select className="form-select" style={{ maxWidth: '200px' }}>
             <option value="">Todos os Estados</option>
