@@ -13,8 +13,14 @@ const ADMIN_NAV = [
   { href: '/admin/relatorios', label: 'Relatórios', icon: 'ti-report' },
 ];
 
+import { useEffect } from 'react';
+
 export default function AdminSidebar() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.classList.remove('sidebar-open');
+  }, [pathname]);
 
   return (
     <aside className={styles.sidebar}>

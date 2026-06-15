@@ -26,8 +26,8 @@ export default async function AdminDashboard() {
             Bem-vindo, {user.name}. Visão geral do estado da FACIM 2026.
           </p>
         </div>
-        <div style={{ display: 'flex', gap: '16px' }}>
-          <Link href="/noticias" className="btn btn-white">Acesso ao Site</Link>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <Link href="/noticias" className="btn btn-ghost">Acesso ao Site</Link>
           <button className="btn btn-primary">
             Exportar Relatório
           </button>

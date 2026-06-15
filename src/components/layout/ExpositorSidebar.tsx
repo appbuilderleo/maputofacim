@@ -11,8 +11,14 @@ const EXPOSITOR_NAV = [
   { href: '/expositor/dashboard/perfil', label: 'Perfil da Empresa', icon: 'ti-building-store' },
 ];
 
+import { useEffect } from 'react';
+
 export default function ExpositorSidebar() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.classList.remove('sidebar-open');
+  }, [pathname]);
 
   return (
     <aside className={styles.sidebar}>

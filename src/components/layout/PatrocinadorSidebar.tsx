@@ -10,8 +10,14 @@ const PATROCINADOR_NAV = [
   { href: '/patrocinador/dashboard/beneficios', label: 'Benefícios', icon: 'ti-gift' },
 ];
 
+import { useEffect } from 'react';
+
 export default function PatrocinadorSidebar() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.classList.remove('sidebar-open');
+  }, [pathname]);
 
   return (
     <aside className={styles.sidebar}>
