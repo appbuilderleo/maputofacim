@@ -40,11 +40,11 @@ function useCountdown(targetDate: Date) {
 
 import { useMemo } from 'react';
 
-const heroImages = [
-  '/hero/1%20(1).png',
-  '/hero/1%20(3).png',
-  '/hero/1%20(5).png',
-  '/hero/1%20(8).png',
+const heroVideos = [
+  '/hero/1.mp4',
+  '/hero/2.mp4',
+  '/hero/3.mp4',
+  '/hero/4.mp4',
 ];
 
 export default function HomePage() {
@@ -100,25 +100,19 @@ export default function HomePage() {
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <>
       {/* ════════ HERO SECTION ════════ */}
       <section className={styles.hero}>
         <div className={styles.heroSlider}>
-          {heroImages.map((img, index) => (
-            <div
-              key={img}
-              className={`${styles.heroSlide} ${index === currentSlide ? styles.heroSlideActive : ''}`}
-              style={{ backgroundImage: `url('${img}')` }}
-            />
-          ))}
+          <video
+            src={heroVideos[currentSlide]}
+            autoPlay
+            muted
+            playsInline
+            onEnded={() => setCurrentSlide((prev) => (prev + 1) % heroVideos.length)}
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+          />
           <div className={styles.heroOverlay}></div>
         </div>
 
@@ -137,10 +131,10 @@ export default function HomePage() {
             </p>
 
             <div className={styles.heroActions}>
-              <Link href="/expositor/registar" className="btn btn-primary btn-lg">
+              <a href="https://mpfacimconfirm.vercel.app/" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
                 <i className="ti ti-building-store" aria-hidden="true"></i>
                 {tHero('registerBtn')}
-              </Link>
+              </a>
               <Link href="/sobre" className="btn btn-white">
                 {tHero('learnMoreBtn')}
               </Link>
@@ -299,10 +293,10 @@ export default function HomePage() {
                 {tCTA('desc')}
               </p>
               <div className={styles.ctaActions}>
-                <Link href="/expositor/registar" className="btn btn-primary btn-lg">
+                <a href="https://mpfacimconfirm.vercel.app/" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
                   <i className="ti ti-building-store" aria-hidden="true"></i>
                   {tCTA('registerBtn')}
-                </Link>
+                </a>
                 <Link href="/contactos" className="btn btn-white">
                   {tCTA('contactBtn')}
                 </Link>

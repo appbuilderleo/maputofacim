@@ -43,7 +43,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.headerInner}>
         <Link href="/" className={styles.logo}>
-          <img src="/logo.png" alt="A Caminho da FACIM" style={{ height: '40px', objectFit: 'contain' }} />
+          <img src="/uploads/logo.png" alt="A Caminho da FACIM" style={{ height: '40px', objectFit: 'contain' }} />
         </Link>
 
         {/* Desktop Navigation */}
@@ -65,9 +65,9 @@ export default function Header() {
           <Link href="/expositor/login" className={styles.loginLink}>
             {t('login')}
           </Link>
-          <Link href="/expositor/registar" className="btn btn-primary btn-sm">
+          <a href="https://mpfacimconfirm.vercel.app/" className="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
             {t('register')}
-          </Link>
+          </a>
         </div>
 
         {/* Hamburger Button */}
@@ -129,13 +129,14 @@ export default function Header() {
           >
             {t('login')}
           </Link>
-          <Link
-            href="/expositor/registar"
+          <a
+            href="https://mpfacimconfirm.vercel.app/"
             className="btn btn-primary btn-block"
+            target="_blank" rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
           >
             {t('registerCompany')}
-          </Link>
+          </a>
         </div>
 
         <div className={styles.mobileMenuFooter}>

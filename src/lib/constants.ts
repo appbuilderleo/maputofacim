@@ -87,11 +87,9 @@ export const TIPOS_STAND = [
   'Personalizado',
 ] as const;
 
-// Navigation links
 export const NAV_LINKS = [
   { label: 'Início', href: '/' },
   { label: 'Sobre', href: '/sobre' },
-  { label: 'Cronograma', href: '/cronograma' },
   { label: 'Notícias', href: '/noticias' },
   { label: 'Patrocínios', href: '/patrocinadores' },
   { label: 'Galeria', href: '/galeria' },
