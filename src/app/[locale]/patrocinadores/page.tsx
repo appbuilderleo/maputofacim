@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import styles from './page.module.css';
+import StackingCards from '@/components/StackingCards';
 
 export const metadata: Metadata = {
   title: 'Pacotes de Patrocínio',
@@ -23,12 +24,12 @@ export default function PatrocinadoresPage() {
   const t = useTranslations('Patrocinadores');
   const packagesData = t.raw('packages') as Pacote[];
 
-  // Merge static styling props
+  // Map to the requested images and dark contrasting colors for cards
   const packages = [
-    { ...packagesData[0], icon: '💎', color: '#534AB7', bgClass: 'pkgPlatinum' },
-    { ...packagesData[1], icon: '🥇', color: '#7A4A00', bgClass: 'pkgGold' },
-    { ...packagesData[2], icon: '🥈', color: '#5F5E5A', bgClass: 'pkgSilver' },
-    { ...packagesData[3], icon: '🥉', color: '#C87840', bgClass: 'pkgBronze' },
+    { ...packagesData[0], link: '/patrocinador/registar', color: '#112240', url: '/uploads/diamante.PNG' },
+    { ...packagesData[1], link: '/patrocinador/registar', color: '#1a365d', url: '/uploads/platina.PNG' },
+    { ...packagesData[2], link: '/patrocinador/registar', color: '#744210', url: '/uploads/ouro.PNG' },
+    { ...packagesData[3], link: '/patrocinador/registar', color: '#4a5568', url: '/uploads/prata.PNG' },
   ];
 
   return (
@@ -45,42 +46,7 @@ export default function PatrocinadoresPage() {
         </div>
       </section>
 
-      <section className={styles.packagesSection}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <span className="t-eyebrow">{t('section.eyebrow')}</span>
-            <h2 className={styles.sectionTitle}>{t('section.title')}</h2>
-            <p className={styles.sectionSub}>
-              {t('section.sub')}
-            </p>
-          </div>
-
-          <div className={styles.packagesGrid}>
-            {packages.map((pkg) => (
-              <div key={pkg.nome} className={`${styles.packageCard} ${styles[pkg.bgClass]}`}>
-                <div className={styles.packageHeader}>
-                  <span className={styles.packageIcon}>{pkg.icon}</span>
-                  <h3 className={styles.packageName} style={{ color: pkg.color }}>{pkg.nome}</h3>
-                  <span className={styles.packageNivel}>{pkg.nivel}</span>
-                </div>
-
-                <ul className={styles.beneficiosList}>
-                  {pkg.beneficios.map((b, i) => (
-                    <li key={i}>
-                      <i className="ti ti-check" aria-hidden="true" style={{ color: pkg.color }}></i>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-
-                <Link href="/patrocinador/registar" className={`btn btn-block ${styles.packageBtn}`} style={{ borderColor: pkg.color, color: pkg.color }}>
-                  {t('btnInterest')}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StackingCards projects={packages} />
 
       <section className={styles.ctaSection}>
         <div className={styles.container}>

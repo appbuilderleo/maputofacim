@@ -32,6 +32,7 @@
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: var(--space-4);
+  color: white;
 }
 
 .highlight { color: var(--facim-orange-light); }
@@ -208,7 +209,7 @@
 
 .timelineActive .timelineDot {
   background: var(--facim-orange);
-  box-shadow: 0 0 0 2px var(--facim-orange), 0 0 0 6px rgba(232, 74, 0, 0.2);
+  box-shadow: 0 0 0 2px var(--facim-orange), 0 0 0 6px rgba(0, 151, 216, 0.2);
 }
 
 .timelinePhase {

@@ -123,7 +123,7 @@ export default async function ExpositorDashboardOverview() {
         </div>
       </div>
 
-      <div style={{ background: 'var(--badge-orange-bg)', borderRadius: 'var(--radius-lg)', padding: '24px', border: '1px solid rgba(232, 74, 0, 0.2)', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+      <div style={{ background: 'var(--badge-orange-bg)', borderRadius: 'var(--radius-lg)', padding: '24px', border: '1px solid rgba(0, 151, 216, 0.2)', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
         <i className="ti ti-info-circle" style={{ fontSize: '24px', color: 'var(--facim-orange)', marginTop: '2px' }}></i>
         <div>
           <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '16px', fontWeight: 800, color: '#902C00', marginBottom: '8px' }}>

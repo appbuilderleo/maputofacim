@@ -11,7 +11,7 @@ export default function Footer() {
             {/* Brand Column */}
             <div className={styles.brandCol}>
               <div className={styles.logo}>
-                <img src="/logo.png" alt="A Caminho da FACIM" style={{ height: '40px', objectFit: 'contain' }} />
+                <img src="/uploads/logo.png" alt="A Caminho da FACIM" style={{ height: '40px', objectFit: 'contain' }} />
               </div>
               <p className={styles.brandDesc}>
                 Plataforma de Gestão e Promoção da Participação da 

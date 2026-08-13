@@ -429,7 +429,7 @@
     },
     "packages": [
       {
-        "nome": "Platinum",
+        "nome": "Diamond",
         "nivel": "Maximum Visibility",
         "beneficios": [
           "Logo on all promotional materials",
@@ -443,7 +443,7 @@
         ]
       },
       {
-        "nome": "Gold",
+        "nome": "Platinum",
         "nivel": "Premium Exposure",
         "beneficios": [
           "Logo on promo materials",
@@ -456,7 +456,7 @@
         ]
       },
       {
-        "nome": "Silver",
+        "nome": "Gold",
         "nivel": "Solid Presence",
         "beneficios": [
           "Logo on sponsor banner",
@@ -468,7 +468,7 @@
         ]
       },
       {
-        "nome": "Bronze",
+        "nome": "Silver",
         "nivel": "Base Participation",
         "beneficios": [
           "Logo on website",

@@ -52,7 +52,7 @@ export default async function AdminPerfilPage({ searchParams }: { searchParams?:
         )}
 
         {searchParams?.error && (
-          <div style={{ padding: '16px', background: 'rgba(232, 74, 0, 0.1)', color: 'var(--facim-danger)', borderRadius: '8px', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 600 }}>
+          <div style={{ padding: '16px', background: 'rgba(0, 151, 216, 0.1)', color: 'var(--facim-danger)', borderRadius: '8px', marginBottom: '24px', display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 600 }}>
             <i className="ti ti-alert-triangle" style={{ fontSize: '20px' }}></i>
             Ocorreu um erro ao actualizar o perfil.
           </div>

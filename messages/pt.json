@@ -429,7 +429,7 @@
     },
     "packages": [
       {
-        "nome": "Platinum",
+        "nome": "Diamante",
         "nivel": "Visibilidade Máxima",
         "beneficios": [
           "Logotipo em todos os materiais promocionais",
@@ -443,7 +443,7 @@
         ]
       },
       {
-        "nome": "Gold",
+        "nome": "Platina",
         "nivel": "Exposição Premium",
         "beneficios": [
           "Logotipo nos materiais promocionais",
@@ -456,7 +456,7 @@
         ]
       },
       {
-        "nome": "Silver",
+        "nome": "Ouro",
         "nivel": "Presença Sólida",
         "beneficios": [
           "Logotipo no banner de patrocinadores",
@@ -468,7 +468,7 @@
         ]
       },
       {
-        "nome": "Bronze",
+        "nome": "Prata",
         "nivel": "Participação Base",
         "beneficios": [
           "Logotipo no website",
