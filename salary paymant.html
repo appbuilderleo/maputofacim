@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="pt-MZ" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Província de Maputo — Portal de Oportunidades e Investimento | FACIM 2026</title>
+    <meta name="description" content="Portal Oficial de Potencialidades e Oportunidades de Investimento da Província de Maputo, Moçambique. Conheça as vantagens competitivas, sectores estratégicos e plataformas para investir.">
+    <meta name="theme-color" content="#0B2545">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS with Official Maputo Province Color Tokens -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mp: {
+                            blue: '#4382C3',        // Ocean Blue from Logo 'M'
+                            blueDark: '#1E4F8A',
+                            blueDeep: '#0B2545',    // Deep Navy
+                            blueLight: '#EBF3FA',
+                            blueHover: '#2B6CB0',
+                            green: '#45B48E',       // Jade Green from Logo 'P'
+                            greenDark: '#1A7A57',
+                            greenLight: '#EAF7F2',
+                            yellow: '#FCC24F',      // Golden Sun from Logo Accent
+                            yellowDark: '#D99B26',
+                            yellowLight: '#FEF8E7',
+                            orange: '#EF5A24',      // FACIM / MZ Vibrant Orange
+                            orangeHover: '#D34412',
+                            slate: '#0F172A',
+                            surface: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Outfit"', 'sans-serif']
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(8px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { opacity: '0.6', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.04)' }
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.35s ease-out',
+                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #0F172A;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* Views Management for SPA Navigation */
+        .view-section {
+            display: none;
+        }
+        .view-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        /* Custom Scrollbar apenas na página */
+        html::-webkit-scrollbar, body::-webkit-scrollbar {
+            width: 8px;
+        }
+        html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+            background: #4382C3;
+            border-radius: 4px;
+        }
+        html::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+            background: #1E4F8A;
+        }
+
+        /* Ocultar rigorosamente qualquer barra de rolagem em modais e gavetas */
+        #sectorModal, #sectorModal *,
+        #leadModal, #leadModal *,
+        .no-scrollbar, .no-scrollbar * {
+            -ms-overflow-style: none !important;
+            scrollbar-width: none !important;
+        }
+        #sectorModal::-webkit-scrollbar, #sectorModal *::-webkit-scrollbar,
+        #leadModal::-webkit-scrollbar, #leadModal *::-webkit-scrollbar,
+        .no-scrollbar::-webkit-scrollbar, .no-scrollbar *::-webkit-scrollbar {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+            background: transparent !important;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen antialiased selection:bg-mp-blue selection:text-white">
+
+    <!-- =========================================================
+         TOP BAR: Institucional Governamental & Contactos (Limpo)
+    ========================================================= -->
+    <aside aria-label="Avisos Institucionais" class="bg-mp-blueDeep text-white text-[12px] py-2.5 border-b border-white/10 hidden md:block z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center">
+            <div class="flex items-center gap-6 text-white/90 font-medium">
+                <a href="#bau" onclick="navigateTo('home', 'bau')" class="hover:text-mp-yellow transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-building-circle-check text-mp-green text-sm"></i> Balcão de Atendimento Único (BAÚ)
+                </a>
+                <span class="text-white/20">|</span>
+                <a href="mailto:investimentos@dpic-maputo.gov.mz" class="hover:text-mp-yellow transition-colors flex items-center gap-2">
+                    <i class="fa-regular fa-envelope text-mp-yellow text-sm"></i> investimentos@dpic-maputo.gov.mz
+                </a>
+                <span class="text-white/20">|</span>
+                <div class="flex items-center gap-2.5">
+                    <a href="#" class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center hover:bg-mp-blue hover:text-white transition-all text-xs" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center hover:bg-mp-blue hover:text-white transition-all text-xs" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- =========================================================
+         NAVIGATION BAR: Logotipo Oficial da Província de Maputo
+    ========================================================= -->
+    <header class="sticky top-0 z-50 glass-header shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logotipo Oficial da Província de Maputo (Sem elementos redundantes) -->
+                <div class="flex items-center cursor-pointer flex-shrink-0" onclick="navigateTo('home')">
+                    <img src="/uploads/logo.png" 
+                         onerror="this.src='public/uploads/logo.png'"
+                         alt="Logotipo Oficial da Província de Maputo" 
+                         class="h-12 sm:h-14 w-auto object-contain hover:opacity-95 transition-opacity" />
+                </div>
+
+                <!-- Menu Desktop (Visível em ecrãs médios/grandes xl) -->
+                <nav class="hidden xl:flex items-center gap-1 font-semibold text-[13px] text-slate-700">
+                    <button onclick="navigateTo('home')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all font-bold text-mp-blue">
+                        Início
+                    </button>
+                    <button onclick="navigateTo('home', 'porquê-maputo')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        Porquê Maputo?
+                    </button>
+                    <button onclick="navigateTo('home', 'corredores-mapa')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        Localização & Corredores
+                    </button>
+                    <button onclick="navigateTo('home', 'sectores')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        Sectores
+                    </button>
+                    <button onclick="navigateTo('home', 'zonas-investimento')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        Zonas Industriais
+                    </button>
+                    <button onclick="navigateTo('home', 'oportunidades-catalogo')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        Oportunidades
+                    </button>
+                    <button onclick="navigateTo('home', 'bau')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        BAÚ / Apoio
+                    </button>
+                    <button onclick="navigateTo('home', 'contactos')" class="px-3 py-2 rounded-lg hover:text-mp-blue hover:bg-mp-blueLight/50 transition-all">
+                        Contactos
+                    </button>
+                </nav>
+
+                <!-- Ações Prioritárias de Conversão (Desktop) -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button onclick="openLeadModal('Geral')" class="inline-flex items-center gap-2 bg-mp-blue hover:bg-mp-blueHover text-white px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200">
+                        <i class="fa-solid fa-briefcase text-mp-yellow"></i> Quero Investir
+                    </button>
+                </div>
+
+                <!-- Botão Menu Mobile & Tablet -->
+                <div class="flex items-center xl:hidden gap-2">
+                    <button onclick="openLeadModal('Mobile Quick')" class="sm:hidden bg-mp-blue text-white px-3 py-1.5 rounded-lg font-bold text-xs">
+                        Investir
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 text-xl focus:outline-none" aria-label="Abrir Menu">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile / Tablet Drawer com Backdrop -->
+        <div id="mobile-backdrop" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 hidden xl:hidden transition-opacity duration-300" onclick="toggleMobileMenu()"></div>
+        <div id="mobile-menu" class="hidden xl:hidden fixed top-20 right-0 w-full sm:w-80 bg-white border-b border-l border-slate-200 px-6 pt-4 pb-8 space-y-3 shadow-2xl z-50 max-h-[calc(100vh-5rem)] overflow-y-auto no-scrollbar animate-fade-in">
+            <button onclick="navigateTo('home')" class="block w-full text-left px-4 py-2.5 rounded-lg font-bold text-sm text-mp-blue hover:bg-mp-blueLight">
+                <i class="fa-solid fa-house w-6 text-mp-blue"></i> Início
+            </button>
+            <button onclick="navigateTo('home', 'porquê-maputo')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-star w-6 text-mp-yellowDark"></i> Porquê Maputo?
+            </button>
+            <button onclick="navigateTo('home', 'corredores-mapa')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-map-location-dot w-6 text-mp-green"></i> Localização & Corredores
+            </button>
+            <button onclick="navigateTo('home', 'sectores')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-cubes-stacked w-6 text-mp-blue"></i> Sectores Estratégicos
+            </button>
+            <button onclick="navigateTo('home', 'zonas-investimento')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-industry w-6 text-mp-orange"></i> Zonas Industriais & ZEE
+            </button>
+            <button onclick="navigateTo('home', 'oportunidades-catalogo')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-magnifying-glass-chart w-6 text-mp-greenDark"></i> Encontrar Oportunidades
+            </button>
+            <button onclick="navigateTo('home', 'bau')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-handshake w-6 text-mp-yellowDark"></i> Balcão de Atendimento Único (BAÚ)
+            </button>
+            <button onclick="navigateTo('home', 'contactos')" class="block w-full text-left px-4 py-2.5 rounded-lg font-semibold text-sm text-slate-700 hover:bg-slate-50">
+                <i class="fa-solid fa-phone w-6 text-mp-blue"></i> Contactos & Localização
+            </button>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+                <button onclick="openLeadModal('Mobile Drawer')" class="w-full bg-mp-blue text-white py-3 rounded-xl font-bold text-center text-sm shadow-md">
+                    <i class="fa-solid fa-paper-plane mr-2 text-mp-yellow"></i> Contactar Equipa de Investimento
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================
+         MAIN CONTENT (SPA CONTAINER)
+    ========================================================= -->
+    <main class="flex-grow">
+
+        <!-- =====================================================
+             VIEW PRINCIPAL (view-home)
+        ===================================================== -->
+        <div id="view-home" class="view-section active">
+
+            <!-- 2. HERO / ECRÃ INICIAL CINEMATOGRÁFICO -->
+            <section class="relative min-h-[86vh] lg:min-h-[92vh] flex items-center justify-center bg-mp-blueDeep overflow-hidden text-white">
+                <!-- Vídeo de Fundo / Poster Dinâmico -->
+                <div class="absolute inset-0 z-0">
+                    <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-35 filter saturate-120">
+                        <source src="/hero/1.mp4" type="video/mp4">
+                    </video>
+                    <!-- Overlays de Gradiente Institucional nas cores da Província -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-mp-blueDeep/95 via-mp-blueDeep/85 to-mp-blue/40"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-mp-blueDeep via-transparent to-black/30"></div>
+                </div>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
+                    <div class="max-w-4xl space-y-6">
+                        <!-- Badges Informativas -->
+                        <div class="inline-flex flex-wrap items-center gap-2.5 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-xs font-bold text-white shadow-lg animate-fade-in">
+                            <span class="w-2.5 h-2.5 rounded-full bg-mp-green animate-ping"></span>
+                            <span class="text-mp-yellow uppercase tracking-widest text-[11px]">Portal de Investimento</span>
+                            <span class="text-white/40">•</span>
+                            <span>Província de Maputo, Moçambique</span>
+                            <span class="text-white/40">•</span>
+                            <span class="bg-mp-orange/90 text-white text-[10px] px-2 py-0.5 rounded-full font-black">FACIM 2026</span>
+                        </div>
+
+                        <!-- Título Principal & Headline -->
+                        <div class="space-y-2">
+                            <span class="block text-mp-yellow font-extrabold text-sm md:text-base tracking-[0.25em] uppercase">
+                                República de Moçambique
+                            </span>
+                            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black font-display tracking-tight text-white leading-[1.08] drop-shadow-md">
+                                PROVÍNCIA DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-mp-yellow via-white to-mp-green">MAPUTO</span>
+                            </h1>
+                            <p class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white/95 font-display">
+                                O lugar certo para investir, viver e ser.
+                            </p>
+                        </div>
+
+                        <!-- Subheadline -->
+                        <p class="text-base sm:text-xl text-white/85 max-w-3xl leading-relaxed font-normal">
+                            Uma plataforma estratégica para negócios, produção, inovação e acesso privilegiado aos mercados de Moçambique e da África Austral.
+                        </p>
+
+                        <!-- Dois CTAs Principais de Conversão -->
+                        <div class="flex flex-wrap items-center gap-4 pt-4">
+                            <a href="#oportunidades-catalogo" onclick="navigateTo('home', 'oportunidades-catalogo')" class="bg-mp-yellow hover:bg-mp-yellowDark text-mp-blueDeep font-black px-8 py-4 rounded-2xl text-sm sm:text-base uppercase tracking-wider shadow-xl hover:shadow-2xl transition-all duration-200 flex items-center gap-3 transform hover:-translate-y-0.5">
+                                <i class="fa-solid fa-arrow-trend-up"></i> Explorar Oportunidades
+                            </a>
+                            <a href="#porquê-maputo" onclick="navigateTo('home', 'porquê-maputo')" class="bg-white/15 hover:bg-white/25 text-white border-2 border-white/30 backdrop-blur-md font-bold px-7 py-4 rounded-2xl text-sm sm:text-base uppercase tracking-wider transition-all duration-200 flex items-center gap-2.5">
+                                <i class="fa-solid fa-circle-question text-mp-yellow"></i> Porquê Investir em Maputo?
+                            </a>
+                        </div>
+
+                        <!-- Pilares de Confiança no Hero -->
+                        <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/15">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-mp-blue/30 border border-mp-blue/40 flex items-center justify-center text-mp-yellow text-lg font-black">
+                                    8
+                                </div>
+                                <div class="text-xs">
+                                    <span class="font-black text-white block">Distritos</span>
+                                    <span class="text-white/70">Pólos de produção</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-mp-green/30 border border-mp-green/40 flex items-center justify-center text-mp-green text-lg font-black">
+                                    <i class="fa-solid fa-route"></i>
+                                </div>
+                                <div class="text-xs">
+                                    <span class="font-black text-white block">Corredor Sul</span>
+                                    <span class="text-white/70">Ligação regional</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-mp-yellow/30 border border-mp-yellow/40 flex items-center justify-center text-mp-yellow text-lg font-black">
+                                    <i class="fa-solid fa-industry"></i>
+                                </div>
+                                <div class="text-xs">
+                                    <span class="font-black text-white block">Beluluane & ZEE</span>
+                                    <span class="text-white/70">Parques modernos</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-mp-orange/30 border border-mp-orange/40 flex items-center justify-center text-white text-lg font-black">
+                                    100%
+                                </div>
+                                <div class="text-xs">
+                                    <span class="font-black text-white block">Apoio BAÚ</span>
+                                    <span class="text-white/70">Facilitação ágil</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 3. PORQUÊ INVESTIR NA PROVÍNCIA DE MAPUTO? (Porquê Maputo?)
+            ===================================================== -->
+            <section id="porquê-maputo" class="py-20 bg-mp-surface scroll-mt-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mp-blueLight text-mp-blue text-xs font-black uppercase tracking-widest mb-3">
+                            <i class="fa-solid fa-shield-halved"></i> Vantagens Competitivas
+                        </div>
+                        <h2 class="text-3xl sm:text-5xl font-black font-display text-slate-900 leading-tight">
+                            Porquê <span class="text-mp-blue">Maputo?</span>
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-slate-600 font-medium">
+                            A Província de Maputo reúne condições únicas que a transformam no epicentro económico e no destino de investimento mais dinâmico de Moçambique.
+                        </p>
+                    </div>
+
+                    <!-- 6 Cards de Vantagens Competitivas -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Card 1: Localização Estratégica -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group hover:-translate-y-1.5 flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-mp-blueLight flex items-center justify-center text-mp-blue text-2xl mb-6 group-hover:scale-110 group-hover:bg-mp-blue group-hover:text-white transition-all duration-300 shadow-sm">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-mp-blue">Pilar 01</span>
+                            <h3 class="text-xl font-black text-slate-900 mt-1 mb-3 font-display">Localização Estratégica</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                                Posição privilegiada no extremo sul de Moçambique, com acesso imediato e facilitado aos maiores mercados e centros industriais da África Austral: <strong>África do Sul e Reino de Eswatini</strong>.
+                            </p>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-mp-blue">
+                                <span>Fronteiras e Portos</span>
+                                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Conectividade -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group hover:-translate-y-1.5 flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-mp-greenLight flex items-center justify-center text-mp-green text-2xl mb-6 group-hover:scale-110 group-hover:bg-mp-green group-hover:text-white transition-all duration-300 shadow-sm">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-mp-green">Pilar 02</span>
+                            <h3 class="text-xl font-black text-slate-900 mt-1 mb-3 font-display">Conectividade e Logística</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                                Integração no <strong>Corredor de Desenvolvimento Sul</strong>, ligando rodovias de classe internacional (EN4, Ponte Maputo-Katembe), rede ferroviária CFM e terminais portuários de águas profundas.
+                            </p>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-mp-green">
+                                <span>Fluxo Rápido de Carga</span>
+                                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Base Industrial -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group hover:-translate-y-1.5 flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-mp-yellowLight flex items-center justify-center text-mp-yellowDark text-2xl mb-6 group-hover:scale-110 group-hover:bg-mp-yellow group-hover:text-mp-blueDeep transition-all duration-300 shadow-sm">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-mp-yellowDark">Pilar 03</span>
+                            <h3 class="text-xl font-black text-slate-900 mt-1 mb-3 font-display">Base Industrial Robusta</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                                Presença de importantes parques fabris e zonas industriais estruturadas, com destaque internacional para o <strong>Parque Industrial de Beluluane</strong> e a Zona Franca Industrial.
+                            </p>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-mp-yellowDark">
+                                <span>Ecossistema Fabril</span>
+                                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Recursos Naturais -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group hover:-translate-y-1.5 flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-mp-greenLight flex items-center justify-center text-mp-greenDark text-2xl mb-6 group-hover:scale-110 group-hover:bg-mp-greenDark group-hover:text-white transition-all duration-300 shadow-sm">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-mp-greenDark">Pilar 04</span>
+                            <h3 class="text-xl font-black text-slate-900 mt-1 mb-3 font-display">Recursos Naturais & Terras</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                                Extensas áreas com elevada aptidão agropecuária, abundantes bacias hidrográficas (Incomáti, Umbelúzi, Maputo), riqueza aquícola, costa marítima estratégica e activos ecoturísticos incomparáveis.
+                            </p>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-mp-greenDark">
+                                <span>Potencial Produtivo Bruto</span>
+                                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Mercado -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group hover:-translate-y-1.5 flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-mp-blueLight flex items-center justify-center text-mp-blueDark text-2xl mb-6 group-hover:scale-110 group-hover:bg-mp-blueDark group-hover:text-white transition-all duration-300 shadow-sm">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-mp-blueDark">Pilar 05</span>
+                            <h3 class="text-xl font-black text-slate-900 mt-1 mb-3 font-display">Mercado em Expansão & Mão-de-Obra</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                                Concentração populacional, institucional e empresarial gerando procura contínua por bens e serviços, com disponibilidade de força de trabalho jovem, técnica e com capacidade de capacitação rápida.
+                            </p>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-mp-blueDark">
+                                <span>Mais de 300M na Região</span>
+                                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Ambiente de Negócios -->
+                        <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200/80 group hover:-translate-y-1.5 flex flex-col">
+                            <div class="w-16 h-16 rounded-2xl bg-orange-50 flex items-center justify-center text-mp-orange text-2xl mb-6 group-hover:scale-110 group-hover:bg-mp-orange group-hover:text-white transition-all duration-300 shadow-sm">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider text-mp-orange">Pilar 06</span>
+                            <h3 class="text-xl font-black text-slate-900 mt-1 mb-3 font-display">Ambiente Favorável ao Investimento</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
+                                Mecanismos consolidados de facilitação através do <strong>Balcão de Atendimento Único (BAÚ)</strong>, incentivos tributários, apoio institucional contínuo e simplificação de processos de licenciamento.
+                            </p>
+                            <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-mp-orange">
+                                <span>Segurança e Agilidade</span>
+                                <i class="fa-solid fa-arrow-right text-slate-400 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 4. MAPA E POSICIONAMENTO GEOESTRATÉGICO
+            ===================================================== -->
+            <section id="corredores-mapa" class="py-20 bg-mp-blueDeep text-white relative overflow-hidden scroll-mt-24">
+                <!-- Efeito visual de malha cartográfica -->
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4382C3_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-12 gap-12 items-center">
+                        <!-- Conteúdo Explicativo -->
+                        <div class="lg:col-span-6 space-y-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mp-yellow text-mp-blueDeep text-xs font-black uppercase tracking-wider">
+                                <i class="fa-solid fa-compass"></i> Corredor de Desenvolvimento Sul
+                            </div>
+                            <h2 class="text-3xl sm:text-5xl font-black font-display leading-tight">
+                                Uma localização que <span class="text-mp-yellow">conecta mercados</span>
+                            </h2>
+                            <p class="text-lg text-white/90 leading-relaxed font-normal">
+                                <strong>Invista em Maputo e esteja estrategicamente posicionado para servir Moçambique e alcançar os mercados da África Austral.</strong>
+                            </p>
+                            <p class="text-sm text-white/75 leading-relaxed">
+                                Localizada no extremo sul do país, a Província de Maputo opera como a principal plataforma multimodal de comércio e transporte da região SADC, articulando portos marítimos, rodovias de trânsito rápido e eixos ferroviários directos com Joanesburgo, Pretória, Mbabane e os grandes centros produtivos da África Austral.
+                            </p>
+
+                            <!-- Indicadores dos 4 Grandes Mercados Conectados -->
+                            <div class="grid grid-cols-2 gap-3 pt-2">
+                                <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+                                    <span class="text-xs text-mp-yellow font-bold uppercase tracking-wider block">🇲🇿 Mercado Nacional</span>
+                                    <span class="text-lg font-black block">Moçambique</span>
+                                    <span class="text-xs text-white/70">Acesso a todo o território</span>
+                                </div>
+                                <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+                                    <span class="text-xs text-mp-green font-bold uppercase tracking-wider block">🇿🇦 Maior Economia Regional</span>
+                                    <span class="text-lg font-black block">África do Sul</span>
+                                    <span class="text-xs text-white/70">Corredor EN4 / Joanesburgo</span>
+                                </div>
+                                <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+                                    <span class="text-xs text-mp-yellow font-bold uppercase tracking-wider block">🇸🇿 Conexão Fronteiriça</span>
+                                    <span class="text-lg font-black block">Reino de Eswatini</span>
+                                    <span class="text-xs text-white/70">Fronteira Namaacha e Goba</span>
+                                </div>
+                                <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+                                    <span class="text-xs text-mp-orange font-bold uppercase tracking-wider block">🌍 Bloco Regional</span>
+                                    <span class="text-lg font-black block">África Austral</span>
+                                    <span class="text-xs text-white/70">Mercado SADC Integrado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Infográfico / Mapa Moderno Interactuável -->
+                        <div class="lg:col-span-6">
+                            <div class="bg-white/5 rounded-3xl p-6 sm:p-8 border border-white/15 backdrop-blur-xl relative shadow-2xl">
+                                <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+                                    <div>
+                                        <h3 class="text-lg font-black text-white font-display">Rotas Estratégicas do Corredor Sul</h3>
+                                        <p class="text-xs text-white/60">Posicionamento Logístico Multimodal</p>
+                                    </div>
+                                    <span class="text-xs bg-mp-green/20 text-mp-green border border-mp-green/30 px-3 py-1 rounded-full font-bold">Em operação contínua</span>
+                                </div>
+
+                                <!-- SVG Interativo representando o Hub de Maputo -->
+                                <svg viewBox="0 0 500 360" class="w-full h-auto drop-shadow-lg">
+                                    <!-- Rotas de Conexão com Animação -->
+                                    <line x1="250" y1="180" x2="90" y2="90" stroke="#4382C3" stroke-width="3" stroke-linecap="round" class="animate-corridor-line" />
+                                    <line x1="250" y1="180" x2="80" y2="250" stroke="#45B48E" stroke-width="3" stroke-linecap="round" class="animate-corridor-line" />
+                                    <line x1="250" y1="180" x2="420" y2="80" stroke="#FCC24F" stroke-width="3" stroke-linecap="round" class="animate-corridor-line" />
+                                    <line x1="250" y1="180" x2="400" y2="280" stroke="#EF5A24" stroke-width="3" stroke-linecap="round" class="animate-corridor-line" />
+
+                                    <!-- Hub Central: Província de Maputo -->
+                                    <circle cx="250" cy="180" r="48" fill="#0B2545" stroke="#4382C3" stroke-width="4" />
+                                    <circle cx="250" cy="180" r="38" fill="#4382C3" opacity="0.25" class="animate-ping" />
+                                    <text x="250" y="174" text-anchor="middle" fill="#FCC24F" font-size="11" font-weight="900" font-family="'Outfit', sans-serif">HUB MAPUTO</text>
+                                    <text x="250" y="190" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="700">PORTO & INDÚSTRIA</text>
+                                    <text x="250" y="202" text-anchor="middle" fill="#A5F3FC" font-size="8">Matola / Boane</text>
+
+                                    <!-- Nó 1: África do Sul (Gauteng / N4) -->
+                                    <circle cx="90" cy="90" r="32" fill="#1E293B" stroke="#4382C3" stroke-width="2.5" />
+                                    <text x="90" y="86" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="800">ÁFRICA DO SUL</text>
+                                    <text x="90" y="99" text-anchor="middle" fill="#93C5FD" font-size="8">Gauteng · N4</text>
+
+                                    <!-- Nó 2: Eswatini -->
+                                    <circle cx="80" cy="250" r="30" fill="#1E293B" stroke="#45B48E" stroke-width="2.5" />
+                                    <text x="80" y="246" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="800">ESWATINI</text>
+                                    <text x="80" y="259" text-anchor="middle" fill="#86EFAC" font-size="8">Goba · Namaacha</text>
+
+                                    <!-- Nó 3: Mercado Nacional Norte / Centro -->
+                                    <circle cx="420" cy="80" r="32" fill="#1E293B" stroke="#FCC24F" stroke-width="2.5" />
+                                    <text x="420" y="76" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="800">MOÇAMBIQUE</text>
+                                    <text x="420" y="89" text-anchor="middle" fill="#FDE68A" font-size="8">Norte & Centro · EN1</text>
+
+                                    <!-- Nó 4: Comércio Internacional / Porto de Maputo -->
+                                    <circle cx="400" cy="280" r="34" fill="#1E293B" stroke="#EF5A24" stroke-width="2.5" />
+                                    <text x="400" y="275" text-anchor="middle" fill="#FFFFFF" font-size="9" font-weight="800">OCEANO ÍNDICO</text>
+                                    <text x="400" y="288" text-anchor="middle" fill="#FCA5A5" font-size="8">Rotas Globais / Ásia</text>
+                                </svg>
+
+                                <div class="mt-4 p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <i class="fa-solid fa-ship text-mp-yellow text-xl"></i>
+                                        <div class="text-xs">
+                                            <span class="font-bold text-white block">Porto de Maputo & Matola</span>
+                                            <span class="text-white/70">Mais de 30 milhões de toneladas movimentadas anualmente</span>
+                                        </div>
+                                    </div>
+                                    <button onclick="openLeadModal('Logística e Corredores')" class="text-xs bg-mp-blue px-3 py-1.5 rounded-lg text-white font-bold hover:bg-mp-blueHover transition-colors">
+                                        Saber mais
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 5. SECTORES ESTRATÉGICOS (9 Grandes Sectores)
+            ===================================================== -->
+            <section id="sectores" class="py-24 bg-white scroll-mt-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-14">
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mp-greenLight text-mp-greenDark text-xs font-black uppercase tracking-widest mb-3">
+                            <i class="fa-solid fa-chart-pie"></i> Motores de Crescimento
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black font-display text-slate-900 leading-tight">
+                            Sectores <span class="text-mp-green">Estratégicos</span>
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-slate-600 font-medium">
+                            Conheça as oportunidades estruturadas em 9 sectores capazes de gerar valor acrescentado, empregos e integração nas cadeias globais de suprimentos.
+                        </p>
+                    </div>
+
+                    <!-- Grid dos 9 Sectores Económicos -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                        <!-- Sector 1: Agricultura -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Agricultura em Maputo" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-green text-white flex items-center justify-center text-xl shadow-lg">
+                                    🌾
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Base Produtiva
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Agricultura Comercial</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Produção em larga escala de hortícolas, frutas tropicais e cereais nos vales férteis do Incomáti e Umbelúzi, com sistemas de irrigação moderna.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-green">Alta produtividade</span>
+                                    <button onclick="openSectorModal('agricultura')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-greenLight text-mp-greenDark hover:bg-mp-green hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 2: Agroindústria -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Agroindústria" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-yellow text-mp-blueDeep flex items-center justify-center text-xl shadow-lg font-black">
+                                    🏭
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Agregação de Valor
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Agroindústria & Processamento</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Transformação local de colheitas, polpas de fruta, unidades de moagem, conservação, embalagem e integração nas redes nacionais de distribuição.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-yellowDark">Substituição de importações</span>
+                                    <button onclick="openSectorModal('agroindustria')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-yellowLight text-mp-yellowDark hover:bg-mp-yellow hover:text-mp-blueDeep px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 3: Indústria e Transformação -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Indústria Transformadora" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-blue text-white flex items-center justify-center text-xl shadow-lg">
+                                    🏗️
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Pólo Industrial
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Indústria & Manufatura</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Materiais de construção, metalomecânica, indústria ligeira, componentes e economia circular com ancoragem no Parque Industrial de Beluluane.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-blue">Exportação Regional</span>
+                                    <button onclick="openSectorModal('industria')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-blueLight text-mp-blue hover:bg-mp-blue hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 4: Logística e Armazenagem -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Logística e Armazenagem" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-blueDeep text-white flex items-center justify-center text-xl shadow-lg">
+                                    🚛
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Conectividade
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Logística & Armazenagem</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Centros logísticos integrados, armazéns alfandegários, parques de carga, soluções de rastreabilidade e cadeias de frio ao longo do Corredor Sul.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-blue">Plataforma SADC</span>
+                                    <button onclick="openSectorModal('logistica')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-blueLight text-mp-blue hover:bg-mp-blue hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 5: Pesca e Aquacultura -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Pesca e Aquacultura" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-green text-white flex items-center justify-center text-xl shadow-lg">
+                                    🐟
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Economia Azul
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Pesca & Aquacultura</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Exploração sustentável de recursos costeiros e marinhos, piscicultura continental, produção de mariscos, unidades de frio e exportação internacional.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-green">Costa Estratégica</span>
+                                    <button onclick="openSectorModal('pesca')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-greenLight text-mp-greenDark hover:bg-mp-green hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 6: Pecuária -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Pecuária" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-yellow text-mp-blueDeep flex items-center justify-center text-xl shadow-lg">
+                                    🐄
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Cadeia Pecuária
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Pecuária & Avicultura</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Criação e engorda de gado bovino e caprino, produção avícola em larga escala, bacia leiteira, fábricas de rações e matadouros industriais certificados.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-yellowDark">Forte Procura Local</span>
+                                    <button onclick="openSectorModal('pecuaria')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-yellowLight text-mp-yellowDark hover:bg-mp-yellow hover:text-mp-blueDeep px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 7: Turismo -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Turismo e Natureza" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-greenDark text-white flex items-center justify-center text-xl shadow-lg">
+                                    🏖️
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Destino de Excelência
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Turismo & Hospitalidade</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    O prestigiado <strong>Parque Nacional de Maputo</strong>, a costa paradisíaca de Ponta do Ouro, resorts ecológicos, turismo de conferências e lazer.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-greenDark">Património Natural</span>
+                                    <button onclick="openSectorModal('turismo')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-greenLight text-mp-greenDark hover:bg-mp-greenDark hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 8: Energia -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Energia Sustentável" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-orange text-white flex items-center justify-center text-xl shadow-lg">
+                                    ⚡
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Transição Energética
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Energia & Renováveis</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Geração solar fotovoltaica, eficiência energética em parques industriais, infraestruturas para zonas rurais e fornecimento de energia limpa contínua.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-orange">Sustentabilidade</span>
+                                    <button onclick="openSectorModal('energia')" class="text-xs font-extrabold uppercase tracking-wider bg-orange-50 text-mp-orange hover:bg-mp-orange hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 9: Comércio e Serviços -->
+                        <div class="rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group flex flex-col bg-white">
+                            <div class="relative h-48 overflow-hidden bg-slate-900">
+                                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Comércio e Serviços" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                <div class="absolute top-4 left-4 w-11 h-11 rounded-xl bg-mp-blue text-white flex items-center justify-center text-xl shadow-lg">
+                                    💼
+                                </div>
+                                <span class="absolute bottom-4 left-4 text-white text-xs font-black uppercase tracking-wider bg-black/40 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
+                                    Serviços de Apoio
+                                </span>
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-black text-slate-900 mb-2 font-display">Comércio & Serviços</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+                                    Serviços empresariais, tecnologias digitais, serviços financeiros, consultoria, saúde, educação técnico-profissional e grandes superfícies comerciais.
+                                </p>
+                                <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                    <span class="text-xs font-bold text-mp-blue">Ecossistema Corporativo</span>
+                                    <button onclick="openSectorModal('servicos')" class="text-xs font-extrabold uppercase tracking-wider bg-mp-blueLight text-mp-blue hover:bg-mp-blue hover:text-white px-4 py-2 rounded-xl transition-all">
+                                        Ver oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 6. AGRICULTURA E AGROINDÚSTRIA (Secção Própria com Narrativa)
+            ===================================================== -->
+            <section class="py-20 bg-gradient-to-br from-mp-greenLight/60 via-white to-mp-yellowLight/40 border-y border-mp-green/20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12">
+                        <div>
+                            <span class="text-xs font-black text-mp-greenDark uppercase tracking-widest block mb-2">Cadeia de Valor Integrada</span>
+                            <h2 class="text-3xl sm:text-4xl font-black font-display text-slate-900">
+                                Agricultura & <span class="text-mp-greenDark">Agroindústria</span>
+                            </h2>
+                        </div>
+                        <div class="bg-white px-6 py-4 rounded-2xl shadow-sm border border-mp-green/30 text-slate-800 font-extrabold text-sm sm:text-base">
+                            💡 Mensagem-chave: <span class="text-mp-greenDark">"Produzir localmente. Transformar localmente. Criar maior valor."</span>
+                        </div>
+                    </div>
+
+                    <!-- Cards em Grade de Oportunidades Concretas -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                            <i class="fa-solid fa-tractor text-mp-green text-2xl mb-3"></i>
+                            <h4 class="font-bold text-xs text-slate-800">Produção Comercial</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Hortícolas, frutas e cereais</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                            <i class="fa-solid fa-faucet-drip text-mp-blue text-2xl mb-3"></i>
+                            <h4 class="font-bold text-xs text-slate-800">Irrigação Precisa</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Tecnologias hídricas eficientes</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                            <i class="fa-solid fa-blender text-mp-yellowDark text-2xl mb-3"></i>
+                            <h4 class="font-bold text-xs text-slate-800">Processamento</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Transformação agroalimentar</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                            <i class="fa-solid fa-snowflake text-cyan-600 text-2xl mb-3"></i>
+                            <h4 class="font-bold text-xs text-slate-800">Cadeia de Frio</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Conservação e estocagem</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                            <i class="fa-solid fa-box-open text-amber-600 text-2xl mb-3"></i>
+                            <h4 class="font-bold text-xs text-slate-800">Embalagem</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Acondicionamento para mercado</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+                            <i class="fa-solid fa-flask-vial text-mp-orange text-2xl mb-3"></i>
+                            <h4 class="font-bold text-xs text-slate-800">Insumos</h4>
+                            <p class="text-[11px] text-slate-500 mt-1">Fertilizantes e bioinsumos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 7. INDÚSTRIA E TRANSFORMAÇÃO
+            ===================================================== -->
+            <section class="py-20 bg-slate-900 text-white relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col lg:flex-row items-center justify-between gap-8 mb-12">
+                        <div>
+                            <span class="text-xs font-black text-mp-yellow uppercase tracking-widest block mb-2">Capacidade Produtiva da Província</span>
+                            <h2 class="text-3xl sm:text-5xl font-black font-display leading-tight">
+                                Indústria & <span class="text-mp-blue">Transformação</span>
+                            </h2>
+                        </div>
+                        <div class="bg-white/10 px-6 py-4 rounded-2xl border border-white/15 text-white/90 font-extrabold text-sm sm:text-base">
+                            💡 Mensagem-chave: <span class="text-mp-yellow">"Transformar recursos em produtos. Produtos em valor. Valor em crescimento."</span>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-mp-blue transition-all">
+                            <div class="text-mp-blue text-3xl mb-4"><i class="fa-solid fa-industry"></i></div>
+                            <h3 class="text-xl font-bold mb-3 font-display">Parques e Zonas Industriais</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Espaços consolidados e prontos para implantação rápida com água, energia de alta tensão, telecomunicações e segurança operacional integrada.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-mp-green transition-all">
+                            <div class="text-mp-green text-3xl mb-4"><i class="fa-solid fa-cubes"></i></div>
+                            <h3 class="text-xl font-bold mb-3 font-display">Materiais de Construção & Ligeira</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Produção local de cimento, argamassas, estruturas metálicas, tubagens e cabos para abastecer o boom de infraestruturas do país e da região.
+                            </p>
+                        </div>
+                        <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-mp-yellow transition-all">
+                            <div class="text-mp-yellow text-3xl mb-4"><i class="fa-solid fa-recycle"></i></div>
+                            <h3 class="text-xl font-bold mb-3 font-display">Reciclagem & Economia Circular</h3>
+                            <p class="text-sm text-slate-300 leading-relaxed">
+                                Reutilização e reciclagem de resíduos industriais, plásticos, vidro e metais com benefícios fiscais para projectos de cariz ecológico.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 8. LOGÍSTICA, ARMAZENAGEM E COMÉRCIO
+            ===================================================== -->
+            <section class="py-20 bg-mp-surface">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-14">
+                        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-mp-blueLight text-mp-blue text-xs font-black uppercase tracking-widest mb-3">
+                            <i class="fa-solid fa-truck-fast"></i> Eixo Logístico Estratégico
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black font-display text-slate-900 leading-tight">
+                            Conectado aos <span class="text-mp-blue">Mercados</span>
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-slate-600 font-bold">
+                            "Produza em Maputo. Conecte-se à região. Alcance novos mercados."
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-mp-blueLight text-mp-blue flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-road"></i></div>
+                            <h4 class="font-bold text-slate-900 mb-2">Rede Rodoviária de Alto Nível</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">EN4 pedagiada com via rápida para África do Sul e Ponte Maputo-Katembe conectando o sul.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-mp-greenLight text-mp-green flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-train"></i></div>
+                            <h4 class="font-bold text-slate-900 mb-2">Corredores Ferroviários</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Linhas de Ressano Garcia, Goba e Limpopo ligando ao interior e aos países vizinhos.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-mp-yellowLight text-mp-yellowDark flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-anchor"></i></div>
+                            <h4 class="font-bold text-slate-900 mb-2">Terminais Portuários</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Porto de Maputo e Porto da Matola com calados profundos e terminais de contentores e minérios.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl bg-orange-50 text-mp-orange flex items-center justify-center text-xl mb-4"><i class="fa-solid fa-warehouse"></i></div>
+                            <h4 class="font-bold text-slate-900 mb-2">Parques de Armazenagem</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Plataformas com armazéns climatizados e terminais de transbordo de mercadorias.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 9. PESCA, AQUACULTURA E PECUÁRIA
+            ===================================================== -->
+            <section class="py-20 bg-white border-t border-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-14">
+                        <span class="text-xs font-black text-mp-green uppercase tracking-widest block mb-2">Proteína & Segurança Alimentar</span>
+                        <h2 class="text-3xl sm:text-4xl font-black font-display text-slate-900">
+                            Pesca, Aquacultura e <span class="text-mp-green">Pecuária</span>
+                        </h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Pesca -->
+                        <div class="bg-mp-surface p-8 rounded-3xl border border-slate-200/80">
+                            <div class="text-2xl mb-3">🐟</div>
+                            <h3 class="text-xl font-black text-slate-900 mb-4 font-display">Pesca Marítima</h3>
+                            <ul class="space-y-2.5 text-sm text-slate-600">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-green text-xs"></i> Processamento e salga</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-green text-xs"></i> Conservação em cadeia de frio</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-green text-xs"></i> Comercialização de peixe de mesa</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-green text-xs"></i> Exportação para mercados vizinhos</li>
+                            </ul>
+                        </div>
+
+                        <!-- Aquacultura -->
+                        <div class="bg-mp-surface p-8 rounded-3xl border border-slate-200/80">
+                            <div class="text-2xl mb-3">🦐</div>
+                            <h3 class="text-xl font-black text-slate-900 mb-4 font-display">Aquacultura Moderna</h3>
+                            <ul class="space-y-2.5 text-sm text-slate-600">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-blue text-xs"></i> Piscicultura em tanques e gaiolas</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-blue text-xs"></i> Produção de mariscos e camarão</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-blue text-xs"></i> Tecnologias de recirculação de água</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-blue text-xs"></i> Fábricas de rações para alevinos</li>
+                            </ul>
+                        </div>
+
+                        <!-- Pecuária -->
+                        <div class="bg-mp-surface p-8 rounded-3xl border border-slate-200/80">
+                            <div class="text-2xl mb-3">🥩</div>
+                            <h3 class="text-xl font-black text-slate-900 mb-4 font-display">Pecuária & Avicultura</h3>
+                            <ul class="space-y-2.5 text-sm text-slate-600">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-yellowDark text-xs"></i> Criação e engorda de gado bovino</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-yellowDark text-xs"></i> Avicultura de corte e postura de ovos</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-yellowDark text-xs"></i> Matadouros e distribuição de carne</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-mp-yellowDark text-xs"></i> Cadeia de laticínios pasteurizados</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 10. TURISMO (Impacto Visual Alto)
+            ===================================================== -->
+            <section class="py-24 bg-mp-blueDeep text-white relative overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80" 
+                         alt="Turismo Maputo" 
+                         class="w-full h-full object-cover opacity-20" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-mp-blueDeep via-mp-blueDeep/90 to-transparent"></div>
+                </div>
+
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="max-w-3xl space-y-6">
+                        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mp-green text-mp-blueDeep text-xs font-black uppercase tracking-wider">
+                            <i class="fa-solid fa-tree"></i> Destino Internacional
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black font-display leading-tight">
+                            Descubra o potencial turístico de <span class="text-mp-yellow">Maputo</span>
+                        </h2>
+                        <p class="text-lg text-white/90 font-medium">
+                            "Natureza, costa e experiências com potencial para novos negócios."
+                        </p>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            O <strong>Parque Nacional de Maputo</strong> (antiga Reserva Especial de Maputo), a zona costeira com as praias cristalinas de Ponta do Ouro e a proximidade com a capital geram uma procura sem precedentes por alojamentos de eco-luxo, conferências e circuitos de turismo aventura.
+                        </p>
+
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-4 text-xs font-bold">
+                            <div class="bg-white/10 p-3.5 rounded-xl border border-white/15">Resorts e Hotéis Ecológicos</div>
+                            <div class="bg-white/10 p-3.5 rounded-xl border border-white/15">Ecoturismo e Safaris</div>
+                            <div class="bg-white/10 p-3.5 rounded-xl border border-white/15">Turismo Costeiro & Mergulho</div>
+                            <div class="bg-white/10 p-3.5 rounded-xl border border-white/15">Gastronomia e Lazer</div>
+                            <div class="bg-white/10 p-3.5 rounded-xl border border-white/15">Turismo de Conferências</div>
+                            <div class="bg-white/10 p-3.5 rounded-xl border border-white/15">Serviços Especializados</div>
+                        </div>
+
+                        <div class="pt-2">
+                            <button onclick="openLeadModal('Turismo e Hotelaria')" class="bg-mp-green hover:bg-mp-greenDark text-white px-7 py-3.5 rounded-xl font-black text-xs uppercase tracking-wider shadow-lg transition-all">
+                                Manifestar Interesse em Turismo <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 11. ZONAS E PLATAFORMAS DE INVESTIMENTO (Onde investir?)
+            ===================================================== -->
+            <section id="zonas-investimento" class="py-24 bg-white scroll-mt-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-16">
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mp-blueLight text-mp-blue text-xs font-black uppercase tracking-widest mb-3">
+                            <i class="fa-solid fa-layer-group"></i> Localizações Preparadas
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black font-display text-slate-900 leading-tight">
+                            Onde <span class="text-mp-blue">investir?</span>
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-slate-600 font-medium">
+                            Conheça as principais plataformas industriais e zonas económicas especiais com infraestruturas prontas para a instalação da sua empresa.
+                        </p>
+                    </div>
+
+                    <div class="grid lg:grid-cols-3 gap-8">
+                        <!-- Beluluane -->
+                        <div class="bg-mp-surface rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-mp-blue text-white">Parque Industrial</span>
+                                    <span class="text-xs font-bold text-slate-500">Boane</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-slate-900 mb-3 font-display">Parque Industrial de Beluluane</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    O maior e mais bem-sucedido parque industrial de Moçambique. Abriga a fundição Mozal e mais de 40 empresas internacionais com infraestruturas completas de água, electricidade de alta tensão e ligação ferroviária directa.
+                                </p>
+                                <div class="space-y-2 mb-6 text-xs text-slate-700">
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Vocações:</span>
+                                        <span class="font-bold">Manufatura, Metalurgia, Logística</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Incentivos:</span>
+                                        <span class="font-bold text-mp-green">Regime Aduaneiro Especial</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Disponibilidade:</span>
+                                        <span class="font-bold text-mp-blue">Lotes Industriais Disponíveis</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="openLeadModal('Parque Industrial Beluluane')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors text-center">
+                                Saiba Mais & Instalação <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+
+                        <!-- Moamba ZEE -->
+                        <div class="bg-mp-surface rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-mp-green text-white">Zona Económica Especial</span>
+                                    <span class="text-xs font-bold text-slate-500">Moamba</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-slate-900 mb-3 font-display">Zona Económica Especial de Moamba</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Plataforma estratégica em expansão no nó fronteiriço do Corredor de Maputo, com forte vocação para agroprocessamento, grandes centros de distribuição e montagem de componentes industriais.
+                                </p>
+                                <div class="space-y-2 mb-6 text-xs text-slate-700">
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Vocações:</span>
+                                        <span class="font-bold">Agroindústria, Logística de Trânsito</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Incentivos:</span>
+                                        <span class="font-bold text-mp-green">Pacote Fiscal ZEE</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Disponibilidade:</span>
+                                        <span class="font-bold text-mp-greenDark">Áreas de Grande Dimensão</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="openLeadModal('ZEE Moamba')" class="w-full bg-mp-green hover:bg-mp-greenDark text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors text-center">
+                                Saiba Mais & Oportunidades <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+
+                        <!-- Zona Franca Industrial -->
+                        <div class="bg-mp-surface rounded-3xl p-8 border border-slate-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center justify-between mb-4">
+                                    <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-mp-yellowDark text-white">Zona Franca</span>
+                                    <span class="text-xs font-bold text-slate-500">Província</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-slate-900 mb-3 font-display">Zona Franca Industrial</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                                    Espaço orientado para actividades industriais voltadas para a exportação, oferecendo isenções alfandegárias de matérias-primas e equipamentos e benefícios fiscais altamente competitivos a nível continental.
+                                </p>
+                                <div class="space-y-2 mb-6 text-xs text-slate-700">
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Vocações:</span>
+                                        <span class="font-bold">Exportação, Transformação</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Incentivos:</span>
+                                        <span class="font-bold text-mp-green">Isenção de Direitos Aduaneiros</span>
+                                    </div>
+                                    <div class="flex justify-between py-1 border-b border-slate-200">
+                                        <span class="font-semibold">Disponibilidade:</span>
+                                        <span class="font-bold text-mp-yellowDark">Adesão por Candidatura</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="openLeadModal('Zona Franca Industrial')" class="w-full bg-mp-blueDeep hover:bg-black text-white py-3 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors text-center">
+                                Saiba Mais & Enquadramento <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 12. ACESSO A MERCADOS (De Maputo para a região)
+            ===================================================== -->
+            <section class="py-20 bg-mp-blueLight/50 border-y border-mp-blue/15">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="text-xs font-black text-mp-blue uppercase tracking-widest block mb-2">Escala Comercial</span>
+                        <h2 class="text-3xl sm:text-4xl font-black font-display text-slate-900">
+                            De Maputo para a <span class="text-mp-blue">região</span>
+                        </h2>
+                        <p class="mt-3 text-slate-600 font-medium">
+                            A localização e as infraestruturas existentes permitem posicionar investimentos com raio de abastecimento imediato:
+                        </p>
+                    </div>
+
+                    <!-- Linha Sequencial de Mercados -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
+                            <span class="text-3xl mb-3 block">🇲🇿</span>
+                            <h3 class="font-black text-slate-900 text-lg">Moçambique</h3>
+                            <p class="text-xs text-slate-500 mt-2">Mais de 32 milhões de habitantes em expansão de consumo.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
+                            <span class="text-3xl mb-3 block">🇿🇦</span>
+                            <h3 class="font-black text-slate-900 text-lg">África do Sul</h3>
+                            <p class="text-xs text-slate-500 mt-2">Fronteira a poucos quilómetros do centro financeiro de Gauteng.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
+                            <span class="text-3xl mb-3 block">🇸🇿</span>
+                            <h3 class="font-black text-slate-900 text-lg">Reino de Eswatini</h3>
+                            <p class="text-xs text-slate-500 mt-2">Corredores rodoviários e ferroviários de ligação directa.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-center relative">
+                            <span class="text-3xl mb-3 block">🌍</span>
+                            <h3 class="font-black text-slate-900 text-lg">África Austral</h3>
+                            <p class="text-xs text-slate-500 mt-2">Integração comercial e livre circulação na zona SADC.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 13. OPORTUNIDADES DE INVESTIMENTO (Encontre a sua oportunidade)
+            ===================================================== -->
+            <section id="oportunidades-catalogo" class="py-24 bg-white scroll-mt-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
+                        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mp-yellowLight text-mp-yellowDark text-xs font-black uppercase tracking-widest mb-3">
+                            <i class="fa-solid fa-briefcase"></i> Banco de Projectos
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-black font-display text-slate-900 leading-tight">
+                            Encontre a sua <span class="text-mp-blue">oportunidade</span>
+                        </h2>
+                        <p class="mt-4 text-base sm:text-lg text-slate-600 font-medium">
+                            Filtre projectos e áreas estruturadas de investimento de acordo com o seu perfil empresarial.
+                        </p>
+                    </div>
+
+                    <!-- Sistema Dinâmico de Filtros -->
+                    <div class="bg-mp-surface p-6 rounded-3xl border border-slate-200 mb-10">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <!-- Filtro por Sector -->
+                            <div>
+                                <label for="filter-sector" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                                    <i class="fa-solid fa-filter text-mp-blue mr-1"></i> Sector de Actividade
+                                </label>
+                                <select id="filter-sector" onchange="filterOpportunities()" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-mp-blue">
+                                    <option value="todos">Todos os Sectores</option>
+                                    <option value="agricultura">Agricultura & Agroindústria</option>
+                                    <option value="industria">Indústria Transformadora</option>
+                                    <option value="logistica">Logística & Armazenagem</option>
+                                    <option value="turismo">Turismo & Natureza</option>
+                                    <option value="pesca">Pesca & Aquacultura</option>
+                                    <option value="energia">Energia & Renováveis</option>
+                                    <option value="servicos">Comércio & Serviços</option>
+                                </select>
+                            </div>
+
+                            <!-- Filtro por Localização -->
+                            <div>
+                                <label for="filter-location" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                                    <i class="fa-solid fa-location-dot text-mp-green mr-1"></i> Distrito
+                                </label>
+                                <select id="filter-location" onchange="filterOpportunities()" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-mp-green">
+                                    <option value="todos">Todos os Distritos</option>
+                                    <option value="Matola">Matola</option>
+                                    <option value="Boane">Boane</option>
+                                    <option value="Moamba">Moamba</option>
+                                    <option value="Marracuene">Marracuene</option>
+                                    <option value="Matutuíne">Matutuíne</option>
+                                    <option value="Manhiça">Manhiça</option>
+                                    <option value="Namaacha">Namaacha</option>
+                                    <option value="Magude">Magude</option>
+                                </select>
+                            </div>
+
+                            <!-- Filtro por Dimensão do Investimento -->
+                            <div>
+                                <label for="filter-scale" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                                    <i class="fa-solid fa-coins text-mp-yellowDark mr-1"></i> Dimensão
+                                </label>
+                                <select id="filter-scale" onchange="filterOpportunities()" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-mp-yellowDark">
+                                    <option value="todos">Todas as Dimensões</option>
+                                    <option value="media">Média Dimensão</option>
+                                    <option value="grande">Grande Escala</option>
+                                    <option value="estrategica">Projecto Estratégico</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards de Oportunidades Concretas -->
+                    <div id="opportunities-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <!-- Opp 1 -->
+                        <div class="opp-item bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+                             data-sector="agricultura" data-location="Manhiça" data-scale="grande">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-mp-greenLight text-mp-greenDark">Agricultura</span>
+                                    <span class="text-xs font-semibold text-slate-500">Manhiça</span>
+                                </div>
+                                <h3 class="text-lg font-black text-slate-900 mb-2">Pólo de Produção Hortícola & Irrigação Comercial</h3>
+                                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Instalação de unidade integrada de cultivo protegido e processamento de vegetais no Vale do Incomáti.</p>
+                                <div class="text-[11px] font-bold text-slate-700 space-y-1 mb-4">
+                                    <div>Tipo: <span class="text-mp-blue">Greenfield / Produção</span></div>
+                                    <div>Dimensão: <span class="text-mp-green">Grande Escala</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
+                                <button onclick="openLeadModal('Produção Hortícola Manhiça')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+                                    Quero Investir
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opp 2 -->
+                        <div class="opp-item bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+                             data-sector="industria" data-location="Boane" data-scale="grande">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-mp-blueLight text-mp-blue">Indústria</span>
+                                    <span class="text-xs font-semibold text-slate-500">Boane (Beluluane)</span>
+                                </div>
+                                <h3 class="text-lg font-black text-slate-900 mb-2">Fábrica de Transformação e Embalagem</h3>
+                                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Produção de materiais de embalagem biodegradáveis e componentes ligeiros para abastecer fábricas da região.</p>
+                                <div class="text-[11px] font-bold text-slate-700 space-y-1 mb-4">
+                                    <div>Tipo: <span class="text-mp-blue">Manufatura Industrial</span></div>
+                                    <div>Dimensão: <span class="text-mp-green">Grande Escala</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
+                                <button onclick="openLeadModal('Fábrica Beluluane')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+                                    Quero Investir
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opp 3 -->
+                        <div class="opp-item bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+                             data-sector="logistica" data-location="Matola" data-scale="estrategica">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-mp-blueDeep text-white">Logística</span>
+                                    <span class="text-xs font-semibold text-slate-500">Matola</span>
+                                </div>
+                                <h3 class="text-lg font-black text-slate-900 mb-2">Centro Logístico & Armazéns de Frio</h3>
+                                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Complexo logístico para consolidação de carga perecível e frigorífica conectada ao Porto da Matola e à EN4.</p>
+                                <div class="text-[11px] font-bold text-slate-700 space-y-1 mb-4">
+                                    <div>Tipo: <span class="text-mp-blue">Hub Logístico Multimodal</span></div>
+                                    <div>Dimensão: <span class="text-mp-orange">Projecto Estratégico</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
+                                <button onclick="openLeadModal('Centro Logístico Matola')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+                                    Quero Investir
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opp 4 -->
+                        <div class="opp-item bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+                             data-sector="turismo" data-location="Matutuíne" data-scale="grande">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-mp-greenDark text-white">Turismo</span>
+                                    <span class="text-xs font-semibold text-slate-500">Matutuíne (Ponta do Ouro)</span>
+                                </div>
+                                <h3 class="text-lg font-black text-slate-900 mb-2">Eco-Resort de Luxo no Parque Nacional</h3>
+                                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Concessão e instalação de empreendimento hoteleiro sustentável com foco em safaris terrestres e marítimos.</p>
+                                <div class="text-[11px] font-bold text-slate-700 space-y-1 mb-4">
+                                    <div>Tipo: <span class="text-mp-blue">Hospitalidade Ecológica</span></div>
+                                    <div>Dimensão: <span class="text-mp-green">Grande Escala</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
+                                <button onclick="openLeadModal('Eco-Resort Matutuíne')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+                                    Quero Investir
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opp 5 -->
+                        <div class="opp-item bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+                             data-sector="energia" data-location="Moamba" data-scale="estrategica">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-orange-100 text-mp-orange">Energia</span>
+                                    <span class="text-xs font-semibold text-slate-500">Moamba</span>
+                                </div>
+                                <h3 class="text-lg font-black text-slate-900 mb-2">Parque Solar Fotovoltaico & Baterias</h3>
+                                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Geração de energia limpa com conexão direta à rede de alta tensão para abastecer a ZEE de Moamba.</p>
+                                <div class="text-[11px] font-bold text-slate-700 space-y-1 mb-4">
+                                    <div>Tipo: <span class="text-mp-blue">IPP / Energia Solar</span></div>
+                                    <div>Dimensão: <span class="text-mp-orange">Projecto Estratégico</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
+                                <button onclick="openLeadModal('Parque Solar Moamba')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+                                    Quero Investir
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Opp 6 -->
+                        <div class="opp-item bg-white rounded-2xl p-6 border border-slate-200/90 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+                             data-sector="pesca" data-location="Marracuene" data-scale="media">
+                            <div>
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-teal-100 text-teal-800">Pesca</span>
+                                    <span class="text-xs font-semibold text-slate-500">Marracuene</span>
+                                </div>
+                                <h3 class="text-lg font-black text-slate-900 mb-2">Unidade de Piscicultura em Recirculação</h3>
+                                <p class="text-xs text-slate-600 mb-4 leading-relaxed">Criação intensiva de tilápia e bagre para suprir o mercado metropolitano e hipermercados.</p>
+                                <div class="text-[11px] font-bold text-slate-700 space-y-1 mb-4">
+                                    <div>Tipo: <span class="text-mp-blue">Aquacultura Comercial</span></div>
+                                    <div>Dimensão: <span class="text-mp-green">Média Dimensão</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
+                                <button onclick="openLeadModal('Piscicultura Marracuene')" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-2 rounded-xl text-xs font-bold uppercase tracking-wider">
+                                    Quero Investir
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 14. FACILITAÇÃO DO INVESTIMENTO (Investir com mais facilidade & BAÚ)
+            ===================================================== -->
+            <section id="bau" class="py-20 bg-mp-surface scroll-mt-24">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="bg-gradient-to-r from-mp-blueDeep via-mp-blue to-mp-blueDark rounded-3xl p-8 sm:p-14 text-white shadow-2xl relative overflow-hidden">
+                        <div class="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+                            <div class="lg:col-span-8 space-y-4">
+                                <span class="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-mp-yellow text-mp-blueDeep inline-block">
+                                    Facilitação Empresarial
+                                </span>
+                                <h2 class="text-3xl sm:text-5xl font-black font-display leading-tight">
+                                    Investir com mais <span class="text-mp-yellow">facilidade</span>
+                                </h2>
+                                <h3 class="text-lg sm:text-xl font-bold text-white/90">
+                                    Balcão de Atendimento Único — BAÚ
+                                </h3>
+                                <p class="text-sm sm:text-base text-white/80 leading-relaxed max-w-2xl">
+                                    O Balcão de Atendimento Único (BAÚ) é o seu ponto focal para formalização célere, emissão de alvarás, tramitação de terras (DUAT) e enquadramento nos benefícios fiscais e alfandegários do Governo de Moçambique.
+                                </p>
+                                <div class="pt-2 text-sm font-semibold text-white/95">
+                                    Precisa de orientação personalizada para instalar o seu projecto?
+                                </div>
+                            </div>
+                            <div class="lg:col-span-4 flex flex-col gap-3 justify-center">
+                                <button onclick="openLeadModal('Apoio BAÚ')" class="bg-mp-yellow hover:bg-mp-yellowDark text-mp-blueDeep py-4 px-8 rounded-2xl font-black text-xs sm:text-sm uppercase tracking-wider shadow-xl transition-all text-center">
+                                    <i class="fa-solid fa-comments mr-2"></i> Falar com a Equipa de Investimento
+                                </button>
+                                <a href="mailto:investimentos@dpic-maputo.gov.mz" class="bg-white/10 hover:bg-white/20 border border-white/25 text-white py-3.5 px-6 rounded-2xl font-bold text-xs uppercase tracking-wider transition-all text-center">
+                                    <i class="fa-regular fa-envelope mr-2 text-mp-yellow"></i> Contacto Directo BAÚ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 15. NÚMEROS QUE IMPRESSIONAM (Indicadores Oficiais)
+            ===================================================== -->
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center max-w-2xl mx-auto mb-14">
+                        <span class="text-xs font-black text-mp-blue uppercase tracking-widest block mb-2">Escala e Relevância</span>
+                        <h2 class="text-3xl sm:text-4xl font-black font-display text-slate-900">
+                            Números que <span class="text-mp-blue">Impressionam</span>
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center">
+                        <div class="p-6 rounded-2xl bg-mp-surface border border-slate-200">
+                            <span class="block text-4xl font-black text-mp-blue font-display">8</span>
+                            <span class="text-xs font-bold text-slate-700 mt-1 block">Distritos Estratégicos</span>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-mp-surface border border-slate-200">
+                            <span class="block text-4xl font-black text-mp-green font-display">1º</span>
+                            <span class="text-xs font-bold text-slate-700 mt-1 block">Pólo Fabril Nacional</span>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-mp-surface border border-slate-200">
+                            <span class="block text-4xl font-black text-mp-yellowDark font-display">+30M</span>
+                            <span class="text-xs font-bold text-slate-700 mt-1 block">Ton. Carga Portuária</span>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-mp-surface border border-slate-200">
+                            <span class="block text-4xl font-black text-mp-blueDeep font-display">3</span>
+                            <span class="text-xs font-bold text-slate-700 mt-1 block">Linhas Ferroviárias</span>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-mp-surface border border-slate-200">
+                            <span class="block text-4xl font-black text-mp-orange font-display">2</span>
+                            <span class="text-xs font-bold text-slate-700 mt-1 block">Fronteiras Imediatas</span>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-mp-surface border border-slate-200">
+                            <span class="block text-4xl font-black text-mp-greenDark font-display">100%</span>
+                            <span class="text-xs font-bold text-slate-700 mt-1 block">Apoio Integral ao Investidor</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- =====================================================
+                 16. CHAMADA FINAL PARA INVESTIDORES
+            ===================================================== -->
+            <section class="py-24 bg-mp-blueDeep text-white text-center relative overflow-hidden">
+                <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-mp-yellow text-mp-blueDeep text-xs font-black uppercase tracking-widest">
+                        O Momento é Agora
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl lg:text-6xl font-black font-display leading-tight">
+                        O próximo grande investimento pode <span class="text-mp-yellow">começar aqui.</span>
+                    </h2>
+                    <p class="text-base sm:text-xl text-white/90 leading-relaxed font-normal max-w-3xl mx-auto">
+                        A Província de Maputo reúne localização estratégica, recursos, infraestruturas, capacidade produtiva, mercados e oportunidades para transformar investimento em crescimento.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 pt-4">
+                        <a href="#oportunidades-catalogo" onclick="navigateTo('home', 'oportunidades-catalogo')" class="bg-mp-yellow hover:bg-mp-yellowDark text-mp-blueDeep font-black px-8 py-4 rounded-2xl text-sm uppercase tracking-wider shadow-xl transition-all">
+                            Explorar Oportunidades
+                        </a>
+                        <button onclick="openLeadModal('Chamada Final')" class="bg-mp-green hover:bg-mp-greenDark text-white font-black px-8 py-4 rounded-2xl text-sm uppercase tracking-wider shadow-xl transition-all">
+                            Contactar a Equipa de Investimento
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- /view-home -->
+
+    </main>
+
+    <!-- =========================================================
+         17. FOOTER INSTITUCIONAL
+    ========================================================= -->
+    <footer id="contactos" class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                <!-- Coluna 1: Instituição -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="/uploads/logo.png" 
+                             onerror="this.src='public/uploads/logo.png'"
+                             alt="Província de Maputo" 
+                             class="h-12 w-auto object-contain" />
+                        <div>
+                            <span class="block text-xs font-bold text-slate-400">República de Moçambique</span>
+                            <span class="block text-sm font-black text-white">Governo da Província de Maputo</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Direcção Provincial da Indústria e Comércio (DPIC). Promoção, atracção de investimentos e desenvolvimento industrial sustentável.
+                    </p>
+                    <p class="text-xs text-mp-yellow font-bold">
+                        61ª Edição da FACIM 2026 · Ricatla, Marracuene
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Navegação Rápida -->
+                <div>
+                    <h3 class="text-sm font-black uppercase tracking-wider text-white mb-4">Navegação Rápida</h3>
+                    <ul class="space-y-2 text-xs text-slate-400 font-semibold">
+                        <li><a href="#porquê-maputo" onclick="navigateTo('home', 'porquê-maputo')" class="hover:text-mp-yellow transition-colors">Porquê Maputo?</a></li>
+                        <li><a href="#corredores-mapa" onclick="navigateTo('home', 'corredores-mapa')" class="hover:text-mp-yellow transition-colors">Localização & Corredores</a></li>
+                        <li><a href="#sectores" onclick="navigateTo('home', 'sectores')" class="hover:text-mp-yellow transition-colors">Sectores Estratégicos</a></li>
+                        <li><a href="#zonas-investimento" onclick="navigateTo('home', 'zonas-investimento')" class="hover:text-mp-yellow transition-colors">Zonas Industriais & ZEE</a></li>
+                        <li><a href="#oportunidades-catalogo" onclick="navigateTo('home', 'oportunidades-catalogo')" class="hover:text-mp-yellow transition-colors">Catálogo de Oportunidades</a></li>
+                        <li><a href="#bau" onclick="navigateTo('home', 'bau')" class="hover:text-mp-yellow transition-colors">Balcão Único (BAÚ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Contactos Oficiais -->
+                <div>
+                    <h3 class="text-sm font-black uppercase tracking-wider text-white mb-4">Contactos Oficiais</h3>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-mp-blue mt-0.5"></i>
+                            <span>Av. do Trabalho, Matola<br>Província de Maputo, Moçambique</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-mp-green"></i>
+                            <span>+258 21 720 000 / +258 84 000 0000</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-regular fa-envelope text-mp-yellow"></i>
+                            <span>investimentos@dpic-maputo.gov.mz</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-globe text-mp-blue"></i>
+                            <span>www.maputo.gov.mz</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: QR Code & FACIM -->
+                <div class="space-y-3">
+                    <h3 class="text-sm font-black uppercase tracking-wider text-white">QR Code FACIM 2026</h3>
+                    <p class="text-xs text-slate-400">Acesse e partilhe este portal directamente no smartphone.</p>
+                    <div class="w-28 h-28 bg-white p-2 rounded-xl flex items-center justify-center shadow-lg">
+                        <!-- SVG QR Code Representativo de Alta Resolução -->
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maputo-provincia-invest.gov.mz" 
+                             alt="QR Code Portal Província de Maputo" 
+                             class="w-full h-full object-contain" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2026 Direcção Provincial da Indústria e Comércio — Província de Maputo. Todos os direitos reservados.</p>
+                <p class="font-bold text-slate-400">PROVÍNCIA DE MAPUTO · O lugar certo para investir, viver e ser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         MODAL 1: DETALHES DO SECTOR ESTRATÉGICO
+    ========================================================= -->
+    <div id="sectorModal" class="fixed inset-0 z-[150] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-7 animate-fade-in border border-slate-200">
+            <div class="flex items-center justify-between pb-3.5 border-b border-slate-100 mb-4">
+                <div class="flex items-center gap-3">
+                    <span id="modalSectorIcon" class="text-3xl">🌾</span>
+                    <div>
+                        <h3 id="modalSectorTitle" class="text-xl sm:text-2xl font-black text-slate-900 font-display">Sector</h3>
+                        <span id="modalSectorBadge" class="text-xs font-bold text-mp-green uppercase tracking-wider">Oportunidades de Investimento</span>
+                    </div>
+                </div>
+                <button onclick="closeSectorModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark text-base"></i>
+                </button>
+            </div>
+
+            <div class="space-y-4 text-sm text-slate-700">
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-wider text-xs mb-1.5 text-mp-blue">Potencial & Vantagens Competitivas</h4>
+                    <p id="modalSectorPotential" class="leading-relaxed text-slate-600 text-xs sm:text-sm">Descrição do potencial do sector.</p>
+                </div>
+
+                <div>
+                    <h4 class="font-black text-slate-900 uppercase tracking-wider text-xs mb-1.5 text-mp-green">Cadeias de Valor & Actividades</h4>
+                    <ul id="modalSectorActivities" class="space-y-1 list-disc list-inside text-slate-600 text-xs sm:text-sm">
+                    </ul>
+                </div>
+
+                <div class="bg-mp-surface p-3.5 rounded-2xl border border-slate-200">
+                    <h4 class="font-black text-slate-900 uppercase tracking-wider text-xs mb-1 text-mp-orange">Localizações & Infraestruturas Relevantes</h4>
+                    <p id="modalSectorLocations" class="text-xs text-slate-600">Distritos de maior concentração e eixos logísticos.</p>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-3.5 border-t border-slate-100 flex items-center justify-between">
+                <button onclick="closeSectorModal()" class="text-xs font-bold text-slate-500 hover:text-slate-800">
+                    Fechar
+                </button>
+                <button id="modalSectorCTA" onclick="openLeadModalFromSector()" class="bg-mp-blue hover:bg-mp-blueHover text-white px-5 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-colors shadow-md">
+                    Manifestar Interesse Neste Sector
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         MODAL 2: MANIFESTAÇÃO DE INTERESSE / FORMULÁRIO BAÚ
+    ========================================================= -->
+    <div id="leadModal" class="fixed inset-0 z-[160] hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6">
+        <div class="bg-white rounded-3xl max-w-lg w-full max-h-[85vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-7 animate-fade-in border border-slate-200">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                <div>
+                    <span class="text-[10px] font-black uppercase tracking-wider text-mp-blue block">Apoio ao Investidor</span>
+                    <h3 class="text-lg sm:text-xl font-black text-slate-900 font-display">Manifestação de Interesse</h3>
+                </div>
+                <button onclick="closeLeadModal()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="investorLeadForm" onsubmit="handleLeadSubmit(event)" class="space-y-3 text-xs">
+                <div>
+                    <label for="leadName" class="block font-bold text-slate-700 mb-1">Nome Completo *</label>
+                    <input type="text" id="leadName" required placeholder="Ex: Dr. Carlos Tembe" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue" />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label for="leadCompany" class="block font-bold text-slate-700 mb-1">Empresa / Instituição</label>
+                        <input type="text" id="leadCompany" placeholder="Ex: AgroMaputo Lda" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue" />
+                    </div>
+                    <div>
+                        <label for="leadCountry" class="block font-bold text-slate-700 mb-1">País / Origem *</label>
+                        <input type="text" id="leadCountry" required placeholder="Ex: Moçambique / RSA" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label for="leadPhone" class="block font-bold text-slate-700 mb-1">Telefone / WhatsApp *</label>
+                        <input type="tel" id="leadPhone" required placeholder="+258 84 000 0000" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue" />
+                    </div>
+                    <div>
+                        <label for="leadEmail" class="block font-bold text-slate-700 mb-1">Email *</label>
+                        <input type="email" id="leadEmail" required placeholder="invest@empresa.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue" />
+                    </div>
+                </div>
+                <div>
+                    <label for="leadSectorSelect" class="block font-bold text-slate-700 mb-1">Sector de Interesse *</label>
+                    <select id="leadSectorSelect" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue">
+                        <option value="Agricultura e Agroindústria">Agricultura e Agroindústria</option>
+                        <option value="Indústria e Manufatura">Indústria e Manufatura (Beluluane / ZEE)</option>
+                        <option value="Logística e Armazenagem">Logística e Armazenagem</option>
+                        <option value="Turismo e Ecoturismo">Turismo e Ecoturismo (Parque Nacional / Ponta do Ouro)</option>
+                        <option value="Pesca e Aquacultura">Pesca e Aquacultura</option>
+                        <option value="Pecuária e Avicultura">Pecuária e Avicultura</option>
+                        <option value="Energia Renovável">Energia Renovável</option>
+                        <option value="Comércio e Serviços">Comércio e Serviços</option>
+                        <option value="Outro">Outro Projecto Estratégico</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="leadMessage" class="block font-bold text-slate-700 mb-1">Descrição do Projecto ou Pedido de Informação</label>
+                    <textarea id="leadMessage" rows="3" placeholder="Indique a estimativa de investimento, localização pretendida ou necessidades de apoio junto do BAÚ..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-slate-800 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-mp-blue"></textarea>
+                </div>
+
+                <div id="leadSuccessMsg" class="hidden p-3 bg-mp-greenLight border border-mp-green text-mp-greenDark rounded-xl font-bold text-xs">
+                    Obrigado pelo seu interesse! Os dados foram submetidos com sucesso para a Equipa de Investimentos da Província de Maputo (BAÚ). Entraremos em contacto brevemente.
+                </div>
+
+                <button type="submit" id="leadSubmitBtn" class="w-full bg-mp-blue hover:bg-mp-blueHover text-white py-3.5 rounded-xl font-black text-xs uppercase tracking-wider shadow-lg transition-colors">
+                    Submeter Manifestação de Interesse
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         JAVASCRIPT: DADOS DOS SECTORES, NAVEGAÇÃO SPA E FILTROS
+    ========================================================= -->
+    <script>
+        // === Base de Dados dos 9 Sectores Estratégicos (Baseado em PROVÍNCIA DE MAPUTO.md) ===
+        const SECTORS_DATA = {
+            agricultura: {
+                icon: "🌾",
+                title: "Agricultura Comercial",
+                badge: "Segurança Alimentar & Abastecimento",
+                potential: "A agricultura constitui uma das principais bases produtivas da Província de Maputo, aproveitando férteis bacias hidrográficas e ligação contínua a mercados consumidores de alta densidade.",
+                activities: [
+                    "Produção comercial de hortícolas de folha e fruto (tomate, repolho, pimentos, cebola)",
+                    "Fruticultura tropical e citrinos para consumo e exportação",
+                    "Cereais e leguminosas em regime intensivo",
+                    "Sistemas de irrigação gota-a-gota e agricultura de precisão",
+                    "Produção e distribuição de sementes certificadas e insumos agrícolas"
+                ],
+                locations: "Distritos da Manhiça, Marracuene, Boane e Moamba."
+            },
+            agroindustria: {
+                icon: "🏭",
+                title: "Agroindústria & Transformação",
+                badge: "Agregação de Valor",
+                potential: "Transformação da produção primária local em produtos de valor acrescentado, substituindo importações no mercado nacional e exportando para a África Austral.",
+                activities: [
+                    "Processamento e polpas de fruta (manga, citrinos, banana)",
+                    "Moagem e refinação de cereais e farinhas compostas",
+                    "Unidades industriais de conservas e acondicionamento asséptico",
+                    "Cadeias de frio e entrepostos de estocagem frigorífica",
+                    "Indústria de embalagem e rotulagem moderna"
+                ],
+                locations: "Boane, Manhiça e Parque Industrial de Beluluane."
+            },
+            industria: {
+                icon: "🏗️",
+                title: "Indústria & Transformação",
+                badge: "Polo Industrial Continental",
+                potential: "A Província de Maputo concentra a maior base fabril do país, usufruindo de energia fiável, gás natural canalizado e incentivos competitivos de Zonas Francas Industriais.",
+                activities: [
+                    "Indústria alimentar e bebidas de classe internacional",
+                    "Fabrico de materiais de construção (cimento, blocos, estruturas metálicas)",
+                    "Indústria ligeira e montagem de componentes mecânicos e elétricos",
+                    "Produção de embalagens plásticas, metálicas e papelão",
+                    "Reciclagem e economia circular integrada"
+                ],
+                locations: "Parque Industrial de Beluluane, Matola e Zona Económica Especial de Moamba."
+            },
+            logistica: {
+                icon: "🚛",
+                title: "Logística, Armazenagem e Distribuição",
+                badge: "Plataforma Regional SADC",
+                potential: "Inserida de forma vital no Corredor de Desenvolvimento Sul, com portos de águas profundas, autoestradas pedagiadas e três linhas ferroviárias activas.",
+                activities: [
+                    "Centros de distribuição logística e terminais de carga seca",
+                    "Armazenagem especializada e parques de contentores",
+                    "Cadeias de frio integradas e transporte frigorífico",
+                    "Operações de trânsito aduaneiro para a África do Sul e Eswatini",
+                    "Serviços de rastreabilidade digital e transitários de carga"
+                ],
+                locations: "Matola (Área Portuária), Boane, Moamba e Ressano Garcia."
+            },
+            pesca: {
+                icon: "🐟",
+                title: "Pesca & Aquacultura",
+                badge: "Economia Azul & Exportação",
+                potential: "A extensa costa marítima e ricas águas interiores criam um ambiente favorável ao desenvolvimento de cadeias aquícolas sustentáveis de alto rendimento.",
+                activities: [
+                    "Aquacultura marinha e estuarina de camarão e bivalves",
+                    "Piscicultura continental intensiva (tilápia e bagre)",
+                    "Processamento, corte e embalagem de pescado",
+                    "Instalação de fábricas de gelo e terminais de refrigeração",
+                    "Comercialização e exportação com certificação sanitária"
+                ],
+                locations: "Matutuíne, Marracuene e Baía de Maputo."
+            },
+            pecuaria: {
+                icon: "🐄",
+                title: "Pecuária & Avicultura",
+                badge: "Proteína Animal",
+                potential: "A procura crescente por carne, ovos e laticínios na cintura metropolitana assegura mercado garantido para projectos de criação e abate regulado.",
+                activities: [
+                    "Criação e engorda de gado bovino e caprino",
+                    "Avicultura de corte e produção de ovos industriais",
+                    "Bacia leiteira e pasteurização de leite e iogurtes",
+                    "Fábricas de rações balanceadas e suplementos",
+                    "Matadouros modernos com certificado Halal e inspeção sanitária"
+                ],
+                locations: "Magude, Moamba, Boane e Manhiça."
+            },
+            turismo: {
+                icon: "🏖️",
+                title: "Turismo & Ecoturismo",
+                badge: "Património & Biodiversidade",
+                potential: "Diversidade paisagística deslumbrante, costa com recifes e o prestigiado Parque Nacional de Maputo tornam a Província um pólo turístico de renome mundial.",
+                activities: [
+                    "Resorts hoteleiros de praia e ecoturismo de luxo",
+                    "Lodges de safari no Parque Nacional de Maputo",
+                    "Turismo náutico, mergulho e observação marinha na Ponta do Ouro",
+                    "Complexos para congressos, conferências e eventos corporativos",
+                    "Restaurantes temáticos e rotas culturais"
+                ],
+                locations: "Matutuíne (Ponta do Ouro, Santa Maria), Marracuene e Namaacha."
+            },
+            energia: {
+                icon: "⚡",
+                title: "Energia & Renováveis",
+                badge: "Transição Energética",
+                potential: "O crescimento industrial exige soluções energéticas eficientes, solares e sustentáveis, aproveitando a excelente irradiação solar da província.",
+                activities: [
+                    "Centrais solares fotovoltaicas em escala de utilidade (IPP)",
+                    "Sistemas solares distribuídos para parques industriais e agropecuária",
+                    "Soluções de armazenamento de energia em baterias (BESS)",
+                    "Infraestruturas elétricas para zonas rurais e industriais",
+                    "Projetos de biogás a partir de resíduos agrícolas e pecuários"
+                ],
+                locations: "Moamba, Boane e Manhiça."
+            },
+            servicos: {
+                icon: "💼",
+                title: "Comércio & Serviços Especializados",
+                badge: "Dinamização Económica",
+                potential: "A concentração populacional e institucional gera contínua oportunidade para empresas prestadoras de serviços corporativos, tecnológicos e financeiros.",
+                activities: [
+                    "Serviços empresariais de contabilidade, auditoria e advocacia",
+                    "Tecnologias de informação e soluções digitais para negócios",
+                    "Serviços bancários, microcrédito e seguros para investimentos",
+                    "Educação técnica profissionalizante vocacionada para a indústria",
+                    "Serviços médicos, saúde ocupacional e clínicas privadas"
+                ],
+                locations: "Cidade da Matola e sedes distritais."
+            }
+        };
+
+        // === NAVEGAÇÃO SPA (Vistas & Âncoras) ===
+        function navigateTo(viewId, elementId = null) {
+            // Em caso de múltiplas vistas futuras
+            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
+            const target = document.getElementById('view-' + viewId);
+            if (target) {
+                target.classList.add('active');
+            } else {
+                document.getElementById('view-home').classList.add('active');
+            }
+
+            // Fechar menu mobile se estiver aberto
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                toggleMobileMenu();
+            }
+
+            // Rolagem suave para o elemento solicitado
+            if (elementId) {
+                setTimeout(() => {
+                    const el = document.getElementById(elementId);
+                    if (el) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Toggle do Menu Mobile
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const backdrop = document.getElementById('mobile-backdrop');
+            const icon = document.getElementById('mobile-menu-icon');
+            if (!menu) return;
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                if (backdrop) backdrop.classList.remove('hidden');
+                if (icon) icon.className = 'fa-solid fa-xmark';
+                document.body.style.overflow = 'hidden';
+            } else {
+                menu.classList.add('hidden');
+                if (backdrop) backdrop.classList.add('hidden');
+                if (icon) icon.className = 'fa-solid fa-bars';
+                document.body.style.overflow = '';
+            }
+        }
+
+        // === MODAL DE SECTOR ===
+        let currentModalSectorKey = 'agricultura';
+
+        function openSectorModal(sectorKey) {
+            const sector = SECTORS_DATA[sectorKey];
+            if (!sector) return;
+            currentModalSectorKey = sectorKey;
+
+            document.getElementById('modalSectorIcon').textContent = sector.icon;
+            document.getElementById('modalSectorTitle').textContent = sector.title;
+            document.getElementById('modalSectorBadge').textContent = sector.badge;
+            document.getElementById('modalSectorPotential').textContent = sector.potential;
+
+            const listEl = document.getElementById('modalSectorActivities');
+            listEl.innerHTML = '';
+            sector.activities.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                listEl.appendChild(li);
+            });
+
+            document.getElementById('modalSectorLocations').textContent = sector.locations;
+
+            const modal = document.getElementById('sectorModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSectorModal() {
+            document.getElementById('sectorModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function openLeadModalFromSector() {
+            closeSectorModal();
+            const sector = SECTORS_DATA[currentModalSectorKey];
+            openLeadModal(sector ? sector.title : 'Sector Selecionado');
+        }
+
+        // === MODAL DE MANIFESTAÇÃO DE INTERESSE / LEAD INVESTIDOR ===
+        function openLeadModal(preselectedSector = '') {
+            const modal = document.getElementById('leadModal');
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            const select = document.getElementById('leadSectorSelect');
+            if (preselectedSector && select) {
+                // Tenta pré-selecionar ou adiciona ao comentário
+                let found = false;
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.toLowerCase().includes(preselectedSector.toLowerCase()) || 
+                        preselectedSector.toLowerCase().includes(select.options[i].value.toLowerCase())) {
+                        select.selectedIndex = i;
+                        found = true;
+                        break;
+                    }
+                }
+                if (!found && document.getElementById('leadMessage')) {
+                    document.getElementById('leadMessage').value = `Interesse manifestado em: ${preselectedSector}\n`;
+                }
+            }
+        }
+
+        function closeLeadModal() {
+            document.getElementById('leadModal').classList.add('hidden');
+            document.body.style.overflow = '';
+            const successMsg = document.getElementById('leadSuccessMsg');
+            if (successMsg) successMsg.classList.add('hidden');
+        }
+
+        function handleLeadSubmit(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('leadSubmitBtn');
+            const successMsg = document.getElementById('leadSuccessMsg');
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> Submetendo...';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Submeter Manifestação de Interesse';
+                successMsg.classList.remove('hidden');
+                document.getElementById('investorLeadForm').reset();
+
+                setTimeout(() => {
+                    closeLeadModal();
+                }, 4000);
+            }, 1000);
+        }
+
+        // Fechar modais ao clicar no fundo escuro
+        window.addEventListener('click', function(e) {
+            const sectorModal = document.getElementById('sectorModal');
+            const leadModal = document.getElementById('leadModal');
+            if (e.target === sectorModal) closeSectorModal();
+            if (e.target === leadModal) closeLeadModal();
+        });
+
+        // === FILTRO DE OPORTUNIDADES EM TEMPO REAL ===
+        function filterOpportunities() {
+            const sectorVal = document.getElementById('filter-sector').value.toLowerCase();
+            const locationVal = document.getElementById('filter-location').value.toLowerCase();
+            const scaleVal = document.getElementById('filter-scale').value.toLowerCase();
+
+            const items = document.querySelectorAll('.opp-item');
+
+            items.forEach(item => {
+                const itemSector = (item.dataset.sector || '').toLowerCase();
+                const itemLocation = (item.dataset.location || '').toLowerCase();
+                const itemScale = (item.dataset.scale || '').toLowerCase();
+
+                const matchSector = (sectorVal === 'todos') || itemSector.includes(sectorVal) || sectorVal.includes(itemSector);
+                const matchLocation = (locationVal === 'todos') || itemLocation.includes(locationVal);
+                const matchScale = (scaleVal === 'todos') || (itemScale === scaleVal);
+
+                if (matchSector && matchLocation && matchScale) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

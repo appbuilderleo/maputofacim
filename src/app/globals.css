@@ -7,14 +7,32 @@
 
 /* ── Design Tokens ──────────────────────────────────────────── */
 :root {
-  /* Brand Colors */
-  --facim-orange: #0097d8;       /* Blue */
-  --facim-orange-dark: #007ab3;  /* Dark Blue */
-  --facim-orange-light: #33b1e3; /* Light Blue */
-  --facim-gold: #fcc24f;         /* Yellow */
-  --facim-gold-light: #ffd985;   /* Light Yellow */
-  --facim-teal: #38a87d;         /* Green */
-  --facim-blue: #005f8a;         /* Darker Blue */
+  /* Cores Oficiais do Logotipo da Província de Maputo */
+  --mp-blue: #4382C3;
+  --mp-blue-dark: #1E4F8A;
+  --mp-blue-deep: #0B2545;
+  --mp-blue-light: #EBF3FA;
+  --mp-blue-hover: #2B6CB0;
+  --mp-green: #45B48E;
+  --mp-green-dark: #1A7A57;
+  --mp-green-light: #EAF7F2;
+  --mp-yellow: #FCC24F;
+  --mp-yellow-dark: #D99B26;
+  --mp-yellow-light: #FEF8E7;
+  --mp-orange: #EF5A24;
+  --mp-orange-hover: #D34412;
+  --mp-slate: #0F172A;
+  --mp-surface: #F8FAFC;
+
+  /* Brand Colors (Compatibilidade FACIM) */
+  --facim-orange: #4382C3;       /* Blue Província */
+  --facim-orange-dark: #1E4F8A;  /* Dark Blue */
+  --facim-orange-light: #69A1DC; /* Light Blue */
+  --facim-gold: #FCC24F;         /* Yellow Província */
+  --facim-gold-light: #FEF8E7;   /* Light Yellow */
+  --facim-teal: #45B48E;         /* Green Província */
+  --facim-blue: #0B2545;         /* Deep Navy */
+
 
   /* Neutral Colors */
   --facim-dark: #0a192f;
@@ -815,5 +833,21 @@ h3, .t-h3 {
 body.sidebar-open .sidebar-overlay {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Ocultar rigorosamente qualquer barra de rolagem em modais e elementos no-scrollbar */
+#sectorModal, #sectorModal *,
+#leadModal, #leadModal *,
+.no-scrollbar, .no-scrollbar * {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+#sectorModal::-webkit-scrollbar, #sectorModal *::-webkit-scrollbar,
+#leadModal::-webkit-scrollbar, #leadModal *::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar, .no-scrollbar *::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
 }
 

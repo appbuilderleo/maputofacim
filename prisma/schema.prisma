@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "cockroachdb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
@@ -56,7 +56,7 @@ model Empresa {
   website          String?
   redesSociais     Json?
   logotipo         String?
-  descricao        String?     @db.String(2000)
+  descricao        String?     @db.VarChar(2000)
   anoFundacao       Int?
   numFuncionarios   Int?
   createdAt        DateTime    @default(now())
@@ -75,9 +75,9 @@ model Candidatura {
   estado          EstadoCandidatura   @default(PENDENTE)
   tipoStand       String?
   areaDesejada    Float?
-  produtosExibir  String?             @db.String(2000)
-  necessidades    String?             @db.String(2000)
-  observacoes     String?             @db.String(2000)
+  produtosExibir  String?             @db.VarChar(2000)
+  necessidades    String?             @db.VarChar(2000)
+  observacoes     String?             @db.VarChar(2000)
   dataSubmissao   DateTime            @default(now())
   dataAprovacao   DateTime?
   motivoRejeicao  String?
@@ -130,7 +130,7 @@ model Patrocinio {
   empresaId       String              @unique @db.Uuid
   pacoteId        String              @db.Uuid
   estado          EstadoPatrocinio    @default(INTERESSE)
-  observacoes     String?             @db.String(2000)
+  observacoes     String?             @db.VarChar(2000)
   dataSolicitacao DateTime            @default(now())
   dataAprovacao   DateTime?
   createdAt       DateTime            @default(now())
@@ -166,8 +166,8 @@ model Noticia {
   id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   titulo      String
   slug        String    @unique
-  resumo      String    @db.String(500)
-  conteudo    String    @db.String(10000)
+  resumo      String    @db.VarChar(500)
+  conteudo    String    @db.Text
   imagem      String?
   videoLink   String?
   categoria   String?
@@ -185,7 +185,7 @@ model Noticia {
 model Evento {
   id          String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   titulo      String
-  descricao   String?   @db.String(2000)
+  descricao   String?   @db.VarChar(2000)
   dataInicio  DateTime
   dataFim     DateTime?
   local       String?
@@ -202,7 +202,7 @@ model MensagemContacto {
   email       String
   telefone    String?
   assunto     String
-  mensagem    String    @db.String(2000)
+  mensagem    String    @db.VarChar(2000)
   lida        Boolean   @default(false)
   respondida  Boolean   @default(false)
   createdAt   DateTime  @default(now())
