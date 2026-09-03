@@ -1140,15 +1140,20 @@ export default function HomePage() {
             </div>
 
             <div className="space-y-3">
-              <h3 className="text-sm font-black uppercase tracking-wider text-white">QR Code FACIM 2026</h3>
+              <h3 className="text-sm font-black uppercase tracking-wider text-white">QR Code Oficial</h3>
               <p className="text-xs text-slate-400">Acesse e partilhe este portal no smartphone.</p>
-              <div className="w-28 h-28 bg-white p-2 rounded-xl flex items-center justify-center shadow-lg">
+              <a
+                href="https://maputofacim-kappa.vercel.app/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-32 h-32 bg-white p-2 rounded-2xl flex items-center justify-center shadow-xl hover:scale-105 transition-transform block"
+              >
                 <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maputo-provincia-invest.gov.mz"
-                  alt="QR Code Portal Província de Maputo"
+                  src="/uploads/qrcode_maputo.png"
+                  alt="QR Code Oficial Província de Maputo"
                   className="w-full h-full object-contain"
                 />
-              </div>
+              </a>
             </div>
           </div>
 
